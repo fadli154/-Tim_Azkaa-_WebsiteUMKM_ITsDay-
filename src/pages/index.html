@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+
+    <!-- main css -->
+    <link href="../css/output.css" rel="stylesheet" />
+    <!-- end main css -->
+  </head>
+  <body>
+    <div class="nav-hero">
+      <!-- Navbar -->
+      <header class="z-20">
+        <nav class="fixed left-0 right-0 z-30 w-full py-3 2xl:py-5 duration-500" id="navbar">
+          <div class="container flex justify-between items-center">
+            <a href="/" class="flex items-center">
+              <img class="w-auto h-10 rounded-md 2xl:h-12" src="../img/logo-angklung-jono.png" alt="Logo" />
+              <p class="ml-3 text-lg font-bold 2xl:text-2xl text-heading">Angklung<span class="text-primary">Jono</span></p>
+            </a>
+            <div class="inset-y-0 flex justify-end flex-1 lg:hidden">
+              <!-- Mobile menu button-->
+              <div class="flex items-center">
+                <button id="hamburger" name="hamburger" type="button" class="block md:hidden">
+                  <span class="origin-top-left hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="origin-bottom-left hamburger-line"></span>
+                </button>
+              </div>
+            </div>
+            <div class="static items-center self-center justify-end hidden h-auto overflow-y-hidden bg-transparent md:block duration-0">
+              <div class="py-1 space-y-1 navbar-part">
+                <ul class="flex flex-row items-center gap-2 navbar-part">
+                  <li class="group wrapper-navbar-link navbar-part">
+                    <a href="/" class="navbar-part text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Beranda</a>
+                  </li>
+                  <li class="group wrapper-navbar-link navbar-part">
+                    <a href="/tentang" class="navbar-part text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Tentang</a>
+                  </li>
+                  <li class="group wrapper-navbar-link navbar-part">
+                    <a href="/statistik" class="navbar-part text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Statistik</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="fixed inset-0 z-40 transition-opacity duration-500 scale-0 blank-display" id="blank-display">
+        <div tabindex="0" class="absolute inset-0 bg-black opacity-50 blank-display"></div>
+      </div>
+
+      <div class="duration-500 fixed bg-white top-0 navbar-part z-50 px-2 w-[50%] sm:w-[35%] -right-96 h-screen md:hidden" id="mobile-menu">
+        <div class="space-y-1 navbar-part">
+          <ul class="navbar-part gap-11">
+            <a href="/" class="flex justify-center my-7 navbar-part">
+              <img class="w-auto h-16 navbar-part" src="../img/logo-angklung-jono.png" alt="Logo" />
+            </a>
+            <li class="group wrapper-navbar-link navbar-part">
+              <a href="/" class="navbar-link navbar-part" aria-current="page">Beranda</a>
+            </li>
+            <li class="group wrapper-navbar-link navbar-part">
+              <a href="/tentang" class="navbar-link navbar-part" aria-current="page">Tentang</a>
+            </li>
+            <li class="group wrapper-navbar-link navbar-part">
+              <a href="/statistik" class="navbar-link navbar-part" aria-current="page">Statistik</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Navbar -->
+
+      <!-- Hero -->
+      <section id="hero" class="container relative md:bg-none">
+        <div class="relative bg-hero">
+          <div class="z-0 flex flex-wrap min-h-screen">
+            <div class="relative self-center w-full sm:w-4/5 md:w-4/5 lg:w-1/2 lg:mt-5">
+              <div class="flex justify-end mt-5" data-aos="zoom-in-left" data-aos-duration="1000">
+                <img class="w-auto h-48 sm:hidden drop-shadow-xl" src="{{ asset('assets/img/hero-bg-sm.png') }}" alt="Logo" />
+              </div>
+              <h1 class="tag-line-hero">
+                <span class="text-primary">Angklung</span>
+                Jono —<span class="block"><span class="text-primary">Suara </span>Alam dari <span class="block"> Tanah Sundah</span></span>
+              </h1>
+              <p class="deskription-hero">
+                Nikmati produk dan cerita seputar angklung karya Pak Jono. Kami menyediakan ruang bagi kamu untuk menjelajahi produk, memahami makna budaya, dan mendukung pelestarian tradisi lewat pembelian langsung dari pengrajin lokal
+                Jawa Barat.
+              </p>
+              <div class="btn-hero-group pt-9 md:pt-11">
+                <button type="button" class="btn-hero-1 drop-shadow-lg cursor-pointer">
+                  <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">Lihat Produk <i class="pl-1 fas fa-arrow-right animate-rightLeft"></i></span>
+                </button>
+                <a href="/tentang" type="button" class="z-10 btn-hero-2 group drop-shadow-lg">
+                  <span class="mx-auto font-semibold duration-500 xl:text-base 2xl:text-lg group-hover:text-white">Beli Sekarang</span>
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-end mt-5">
+              <img
+                class="hidden sm:block lg:hidden sm:absolute sm:z-0 drop-shadow-xl sm:right-0 sm:bottom-24 w-auto h-48 sm:h-[55%] md:h-[50%] navbar-part"
+                loading="lazy"
+                src="{{ asset('assets/img/hero-bg-sm.png') }}"
+                alt="bg-hero"
+                data-aos="zoom-in-left"
+                data-aos-duration="1000"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Hero -->
+    </div>
+
+    <!-- script -->
+    <script src="../script/script.js"></script>
+    <!-- End script -->
+  </body>
+</html>
