@@ -7,6 +7,7 @@
   --color-tertiary: #d9e3fc;
   --color-heading: #0f1c2cff;
   --color-description: #6f6f6f;
+  --color-active: #491c1bff;
   --color-unactive: #9a9ea6;
   --color-btn2: #ffe6e277;
 }
@@ -21,7 +22,7 @@ body {
 
 @layer base {
   .container {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-10;
   }
   .hamburger-line {
     @apply my-2 block h-[2px] w-[30px] bg-black transition duration-300 ease-in-out;
@@ -78,7 +79,7 @@ body {
 }
 
 .btn-hero-1 {
-  @apply mr-4 inline-flex h-12 w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
+  @apply mr-4 inline-flex h-12 w-34 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
 }
 
 .btn-hero-2 {
@@ -105,12 +106,12 @@ body {
 
 @media (min-width: 1024px) {
   .bg-hero {
-    background: url("../../public/assets/img/hero-bg.png");
+    background: url("../img/img-hero.png");
     background-position: right;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 10;
+    z-index: 20;
   }
 }

@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Beranda | AngklungJono</title>
 
     <!-- main css -->
-    <link href="../css/output.css" rel="stylesheet" />
+    <link href="./css/output.css" rel="stylesheet" />
     <!-- end main css -->
   </head>
   <body>
@@ -17,7 +17,7 @@
         <nav class="fixed left-0 right-0 z-30 w-full py-3 2xl:py-5 duration-500" id="navbar">
           <div class="container flex justify-between items-center">
             <a href="/" class="flex items-center">
-              <img class="w-auto h-10 rounded-md 2xl:h-12" src="../img/logo-angklung-jono.png" alt="Logo" />
+              <img class="w-auto h-10 rounded-md 2xl:h-12" src="./img/logo-angklung-jono.png" alt="Logo" />
               <p class="ml-3 text-lg font-bold 2xl:text-2xl text-heading">Angklung<span class="text-primary">Jono</span></p>
             </a>
             <div class="inset-y-0 flex justify-end flex-1 lg:hidden">
@@ -34,7 +34,7 @@
               <div class="py-1 space-y-1 navbar-part">
                 <ul class="flex flex-row items-center gap-2 navbar-part">
                   <li class="group wrapper-navbar-link navbar-part">
-                    <a href="/" class="navbar-part text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Beranda</a>
+                    <a href="/" class="navbar-part text-sm lg:text-base text-active 2xl:text-[1.3rem]" aria-current="page">Beranda</a>
                   </li>
                   <li class="group wrapper-navbar-link navbar-part">
                     <a href="/tentang" class="navbar-part text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Tentang</a>
@@ -57,10 +57,10 @@
         <div class="space-y-1 navbar-part">
           <ul class="navbar-part gap-11">
             <a href="/" class="flex justify-center my-7 navbar-part">
-              <img class="w-auto h-16 navbar-part" src="../img/logo-angklung-jono.png" alt="Logo" />
+              <img class="w-auto h-16 navbar-part" src="./img/logo-angklung-jono.png" alt="Logo" />
             </a>
             <li class="group wrapper-navbar-link navbar-part">
-              <a href="/" class="navbar-link navbar-part" aria-current="page">Beranda</a>
+              <a href="/" class="navbar-link navbar-part text-active" aria-current="page">Beranda</a>
             </li>
             <li class="group wrapper-navbar-link navbar-part">
               <a href="/tentang" class="navbar-link navbar-part" aria-current="page">Tentang</a>
@@ -79,11 +79,11 @@
           <div class="z-0 flex flex-wrap min-h-screen">
             <div class="relative self-center w-full sm:w-4/5 md:w-4/5 lg:w-1/2 lg:mt-5">
               <div class="flex justify-end mt-5" data-aos="zoom-in-left" data-aos-duration="1000">
-                <img class="w-auto h-48 sm:hidden drop-shadow-xl" src="{{ asset('assets/img/hero-bg-sm.png') }}" alt="Logo" />
+                <img class="w-auto h-48 sm:hidden drop-shadow-xl" src="./img/img-hero.png" alt="Logo" />
               </div>
               <h1 class="tag-line-hero">
                 <span class="text-primary">Angklung</span>
-                Jono —<span class="block"><span class="text-primary">Suara </span>Alam dari <span class="block"> Tanah Sundah</span></span>
+                Jono —<span class="block"><span class="text-primary">Suara </span>Alam dari <span class="block"> Tanah Sunda</span></span>
               </h1>
               <p class="deskription-hero">
                 Nikmati produk dan cerita seputar angklung karya Pak Jono. Kami menyediakan ruang bagi kamu untuk menjelajahi produk, memahami makna budaya, dan mendukung pelestarian tradisi lewat pembelian langsung dari pengrajin lokal
@@ -102,7 +102,7 @@
               <img
                 class="hidden sm:block lg:hidden sm:absolute sm:z-0 drop-shadow-xl sm:right-0 sm:bottom-24 w-auto h-48 sm:h-[55%] md:h-[50%] navbar-part"
                 loading="lazy"
-                src="{{ asset('assets/img/hero-bg-sm.png') }}"
+                src="./img/img-hero.png"
                 alt="bg-hero"
                 data-aos="zoom-in-left"
                 data-aos-duration="1000"
@@ -111,11 +111,12 @@
           </div>
         </div>
       </section>
+      <img class="w-auto h-60 md:h-70 lg:h-90 2xl:h-110 -z-1 hidden sm:block right-0 bottom-0 absolute drop-shadow-xl" src="./img/pattern-hero.png" alt="Logo" />
       <!-- End Hero -->
     </div>
 
     <!-- script -->
-    <script src="../script/script.js"></script>
+    <script src="./script/script.js"></script>
     <!-- End script -->
   </body>
 </html>
