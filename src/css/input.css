@@ -165,8 +165,7 @@ body {
 @media (min-width: 1024px) {
   .bg-hero {
     background: url("../img/img-hero.png");
-    background-position: right;
-    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
