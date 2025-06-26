@@ -119,14 +119,8 @@ body {
     position: relative;
     z-index: 20;
   }
-}
 
-/* end hero */
-
-/* about */
-
-@media (min-width: 1024px) {
-  .bg-about {
+  #about {
     background: url("../img/img-about-main.png");
     background-position: left;
     background-repeat: no-repeat;
@@ -134,7 +128,20 @@ body {
     position: relative;
     z-index: 20;
   }
+
+  #chatbot {
+    background: url("../img/img-chatbot-main.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 20;
+  }
 }
+
+/* end hero */
+
+/* about */
 
 /* end about */
 
@@ -162,3 +169,21 @@ body {
   color: white;
   box-shadow: 0 0 1px #22c55e, 0 0 1px #22c55e, 0 0 2px #22c55e, 0 0 10px #22c55e;
 }
+
+/* end ChatBot */
+
+/* footer */
+/* footer */
+#footer {
+  background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
+}
+
+.link-footer {
+  @apply relative pb-2 text-lg text-description/70 duration-500 before:absolute before:bottom-0 before:h-[3px] before:w-0 before:bg-primary/80 before:duration-500 before:content-[''] hover:text-description hover:before:w-full 2xl:text-2xl;
+}
+
+.icon-wrapper {
+  @apply text-active flex h-12  w-12 cursor-pointer items-center justify-center rounded-[50%] bg-white shadow-lg duration-500  hover:bg-primary sm:h-16 sm:w-16 2xl:h-24 2xl:w-24;
+}
+
+/* end footer */
