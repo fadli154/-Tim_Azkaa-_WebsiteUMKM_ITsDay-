@@ -13,12 +13,13 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
 body {
   background: #feffff;
+  overflow-x: clip;
 }
 
 .tag-line {
