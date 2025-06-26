@@ -7,7 +7,7 @@
     <title>Beranda | AngklungJono</title>
 
     <!-- main css -->
-    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/output.css" rel="stylesheet" />
     <!-- end main css -->
 
     <!-- glider css -->
@@ -21,6 +21,10 @@
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="./extensions/bootstrap-icons/bootstrap-icons.min.css" />
     <!-- end bootstrap icon -->
+
+    <!-- aos css -->
+    <link href="./extensions/aos/aos.css" rel="stylesheet" />
+    <!-- end aos css -->
   </head>
   <body>
     <!-- navhero -->
@@ -110,7 +114,7 @@
               </p>
               <div class="btn-hero-group pt-9 md:pt-11">
                 <a href="#artikels" type="button" class="btn-hero-1 drop-shadow-lg cursor-pointer">
-                  <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">Lihat Produk <i class="pl-1 fas fa-arrow-right animate-rightLeft"></i></span>
+                  <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">Lihat Produk <i class="pl-1 fas fa-arrow-right animate-pulse"></i></span>
                 </a>
                 <a href="#chatbot" type="button" class="z-10 btn-hero-2 group drop-shadow-lg">
                   <span class="mx-auto font-semibold duration-500 xl:text-base 2xl:text-lg group-hover:text-white">Beli Sekarang</span>
@@ -140,9 +144,9 @@
     <!-- about -->
     <section class="min-h-screen bg-about about" id="about">
       <div class="container flex flex-col justify-center items-center min-h-screen mt-2 mt-12 lg:py-4 bg-bot-section md:flex-nowrap md:flex-row lg:flex-row lg:justify-end">
-        <div class="block w-full h-max md:self-center lg:hidden">
+        <div class="block w-full h-max md:self-center lg:w-[60%]">
           <div class="flex justify-center md:justify-start">
-            <img loading="lazy" class="w-[250px] sm:w-[300px] md:w-[330px] h-auto" src="./img/img-about.png" alt="foto-section1" />
+            <img loading="lazy" class="w-[250px] sm:w-[300px] md:w-[330px] lg:w-[550px] 2xl:w-[650px] h-auto" src="./img/img-about.png" alt="foto-section1" data-aos="fade-up-right" data-aos-duration="1000" />
           </div>
         </div>
         <div class="w-full h-max self-end flex flex-col justify-end lg:items-end relative sm:self-center pt-12 sm:pt-16 lg:w-[50%]">
@@ -394,10 +398,10 @@
     <!-- whatsapp bot -->
 
     <section id="chatbot" class="chatbot">
-      <div class="container flex flex-col justify-center min-h-screen py-10 lg:py-5 bg-bot-section md:flex-nowrap md:flex-row-reverse lg:flex-row lg:justify-start">
-        <div class="block w-full h-max md:self-center lg:hidden">
+      <div class="container flex flex-col justify-center min-h-screen py-10 lg:py-5 bg-bot-section md:flex-nowrap md:flex-row-reverse">
+        <div class="block w-full h-max md:self-center lg:w-[60%]">
           <div class="flex justify-center md:justify-end">
-            <img loading="lazy" class="w-[240px] sm:w-[280px] md:w-[320px] h-auto" src="./img/img-chatbot.png" alt="foto-section1" />
+            <img loading="lazy" class="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[500px] 2xl:w-[600px] h-auto" src="./img/img-chatbot.png" alt="foto-chatbot" data-aos="fade-up-left" data-aos-duration="1000" />
           </div>
         </div>
         <div class="w-full h-max relative sm:self-center pt-8 lg:w-[50%]">
@@ -407,9 +411,9 @@
             <button type="button" class="btn-whatsapp duration-500 cursor-pointer w-full mr-2 lg:w-[45%] h-14 2xl:h-16 text-base text-green-500 bg-transparent border-2 border-green-500 rounded-md">
               <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">WhatsApp ChatBot <i class="pl-2 fas fa-robot animate-pulse"></i></span>
             </button>
-            <a href="#alur-lapor" type="button" class="btn-hero-2 group !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
+            <a href="#artikels" type="button" class="btn-hero-2 group !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
               <span class="mx-auto font-semibold duration-500 xl:text-base 2xl:text-lg group-hover:text-white"
-                >Pelajari
+                >Produk
                 <i class="pl-2 fas fa-book-reader animate-pulse"></i>
               </span>
             </a>
@@ -502,6 +506,10 @@
     <!-- script -->
     <script src="./script/script.js"></script>
     <script src="./extensions/GliderJS/glider.min.js"></script>
+    <script src="./extensions/aos/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- End script -->
   </body>
 </html>

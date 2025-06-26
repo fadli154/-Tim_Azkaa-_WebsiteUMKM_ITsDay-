@@ -112,36 +112,6 @@ body {
   background-color: var(--color-primary);
 }
 
-@media (min-width: 1024px) {
-  .bg-hero {
-    background: url("../img/img-hero.png");
-    background-position: right;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 20;
-  }
-
-  #about {
-    background: url("../img/img-about-main.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 20;
-  }
-
-  #chatbot {
-    background: url("../img/img-chatbot-main.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 20;
-  }
-}
-
 /* end hero */
 
 /* about */
@@ -190,3 +160,17 @@ body {
 }
 
 /* end footer */
+
+/* media query */
+@media (min-width: 1024px) {
+  .bg-hero {
+    background: url("../img/img-hero.png");
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 20;
+  }
+}
+/* end media query */

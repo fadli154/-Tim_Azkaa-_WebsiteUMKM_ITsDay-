@@ -3,6 +3,7 @@ const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#mobile-menu");
 const blankDisplay = document.querySelector("#blank-display");
 const sections = document.querySelectorAll("section[id]");
+const navLink = document.querySelectorAll(".wrapper-navbar-link");
 
 window.onscroll = function () {
   const navA = document.querySelectorAll(".nav-link");
@@ -27,7 +28,6 @@ window.onscroll = function () {
 
   navA.forEach((a) => {
     if (a.getAttribute("href") === `#${current}`) {
-      console.log(a);
       a.classList.add("text-active");
     } else {
       a.classList.remove("text-active");
@@ -43,6 +43,17 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("navbar-menu-active");
   navMenu.classList.toggle("-right-96");
   navMenu.classList.toggle("-right-0");
+});
+
+// navbar close when click navli
+navLink.forEach((n) => {
+  n.addEventListener("click", function () {
+    blankDisplay.classList.add("scale-0");
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.toggle("navbar-menu-active");
+    navMenu.classList.add("-right-96");
+    navMenu.classList.remove("-right-0");
+  });
 });
 
 // listen to clicks in document
