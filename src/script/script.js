@@ -2,8 +2,10 @@ const navbar = document.querySelector("#navbar");
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#mobile-menu");
 const blankDisplay = document.querySelector("#blank-display");
+const sections = document.querySelectorAll("section[id]");
 
 window.onscroll = function () {
+  const navA = document.querySelectorAll(".nav-link");
   const fixedNavbar = navbar.offsetTop;
 
   if (window.scrollY > fixedNavbar) {
@@ -13,6 +15,24 @@ window.onscroll = function () {
     navbar.classList.remove("navbar-scrolled");
     navbar.classList.remove("backdrop-blur-md");
   }
+
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navA.forEach((a) => {
+    if (a.getAttribute("href") === `#${current}`) {
+      console.log(a);
+      a.classList.add("text-active");
+    } else {
+      a.classList.remove("text-active");
+    }
+  });
 };
 
 // hamburger menu
