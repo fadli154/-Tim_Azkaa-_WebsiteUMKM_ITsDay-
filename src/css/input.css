@@ -84,7 +84,7 @@ body {
 }
 
 .btn-hero-1 {
-  @apply mr-4 inline-flex h-12 w-34 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
+  @apply mr-4 inline-flex h-12 w-36 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
 }
 
 .btn-hero-2 {
@@ -137,3 +137,28 @@ body {
 }
 
 /* end about */
+
+/* artikel produk */
+
+#artikels {
+  background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.card-artikel {
+  @apply relative h-40 w-full cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 lg:overflow-hidden lg:rounded-md lg:bg-white lg:shadow-lg xl:h-[34rem] 2xl:h-[50rem];
+}
+
+/* end artikel produk */
+
+/* ChatBot */
+.btn-whatsapp:focus,
+.btn-whatsapp:hover {
+  background-color: #22c55e;
+  color: white;
+  box-shadow: 0 0 1px #22c55e, 0 0 1px #22c55e, 0 0 2px #22c55e, 0 0 10px #22c55e;
+}
