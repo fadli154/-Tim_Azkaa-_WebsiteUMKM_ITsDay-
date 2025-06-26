@@ -2,8 +2,8 @@
 
 @theme {
   --color-primary: #552523ff;
-  --color-primary-active: #df5046;
-  --color-secondary: #f58634;
+  --color-primary-active: #796361ff;
+  --color-secondary: #6b625bff;
   --color-tertiary: #d9e3fc;
   --color-heading: #0f1c2cff;
   --color-description: #6f6f6f;
@@ -14,10 +14,15 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #feffff;
+}
+
+.tag-line {
+  @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-500 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0;
 }
 
 @layer base {
@@ -115,3 +120,20 @@ body {
     z-index: 20;
   }
 }
+
+/* end hero */
+
+/* about */
+
+@media (min-width: 1024px) {
+  .bg-about {
+    background: url("../img/img-about-main.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+/* end about */
