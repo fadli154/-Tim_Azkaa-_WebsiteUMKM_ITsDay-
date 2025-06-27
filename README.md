@@ -13,7 +13,6 @@ Dengan pendekatan visual yang menarik dan user-friendly, situs ini tidak hanya m
 ## ✨ Fitur Unggulan
 
 - 🛍️ **Katalog Produk**: Menampilkan berbagai jenis angklung yang tersedia lengkap dengan foto, harga, dan deskripsi.
-- 📚 **Edukasi Budaya**: Halaman khusus tentang sejarah angklung dan cara memainkannya.
 - 💬 **Formulir Pemesanan & Kontak**: Pelanggan dapat langsung melakukan pemesanan dan menghubungi UMKM melalui formulir online.
 - 📱 **Responsif & Mudah Diakses**: Tampilan website yang optimal di berbagai perangkat, dari desktop hingga ponsel.
 
