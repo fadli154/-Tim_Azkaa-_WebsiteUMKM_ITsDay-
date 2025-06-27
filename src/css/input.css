@@ -12,21 +12,70 @@
   --color-btn2: #ffe6e277;
 }
 
-html {
-  overflow-x: clip;
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #feffff;
-  overflow-x: clip;
-}
-
-.tag-line {
-  @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-500 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0;
-}
-
 @layer base {
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100;
+    src: local("Inter"), url("../fonts/Inter/Inter-Thin.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    src: local("Inter"), url("../fonts/Inter/Inter-ExtraLight.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Inter"), url("../fonts/Inter/Inter-Light.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Inter"), url("../fonts/Inter/Inter-Regular.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Inter"), url("../fonts/Inter/Inter-Medium.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Inter"), url("../fonts/Inter/Inter-SemiBold.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Inter"), url("../fonts/Inter/Inter-Bold.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    src: local("Inter"), url("../fonts/Inter/Inter-ExtraBold.woff2"), format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    src: local("Inter"), url("../fonts/Inter/Inter-Black.woff2"), format("woff2");
+  }
+
   .container {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-10;
   }
@@ -36,6 +85,21 @@ body {
   .hamburger-line {
     @apply my-2 block h-[2px] w-[30px] bg-black transition duration-300 ease-in-out;
   }
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #feffff;
+  overflow-x: clip;
+  font-family: "Inter", sans-serif;
+}
+
+.tag-line {
+  @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-500 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0;
 }
 
 .navbar-scrolled {
