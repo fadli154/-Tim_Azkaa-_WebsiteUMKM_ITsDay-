@@ -172,7 +172,7 @@
 /* end hamburger */
 
 .logo-brand {
-  @apply w-auto h-10 rounded-md 2xl:h-12 drop-shadow-md;
+  @apply w-auto h-10 rounded-md 2xl:h-12 drop-shadow-sm;
 }
 
 .name-brand {
