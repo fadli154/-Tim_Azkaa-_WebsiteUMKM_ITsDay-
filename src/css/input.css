@@ -259,7 +259,7 @@
 
 #articles {
   background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
-  @apply relative overflow-hidden z-20 bg-center bg-no-repeat bg-cover py-10 md:py-16 lg:py-18 xl:py-20 2xl:py-24;
+  @apply relative overflow-hidden z-20 bg-center bg-no-repeat bg-cover my-4 py-14 md:py-16 lg:py-18 xl:py-20 2xl:py-24;
 }
 
 .article-tag-line {

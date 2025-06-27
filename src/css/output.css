@@ -2779,11 +2779,12 @@
   background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
   position: relative;
   z-index: 20;
+  margin-block: calc(var(--spacing) * 4);
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-block: calc(var(--spacing) * 10);
+  padding-block: calc(var(--spacing) * 14);
   @media (width >= 48rem) {
     padding-block: calc(var(--spacing) * 16);
   }
