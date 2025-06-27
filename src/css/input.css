@@ -94,11 +94,11 @@
   }
 
   .tag-line {
-    @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-350 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0 text-heading 2xl:w-[75%] font-bold;
+    @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-350 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0 text-heading 2xl:w-[90%] font-bold;
   }
 
   .heading-text {
-    @apply text-base text-primary/60 font-semibold sm:w-full sm:pb-0 mb-2 sm:mb-0 lg:text-base xl:w-[90%] 2xl:text-xl border-l-4 border-primary/50 pl-3 md:text-xl;
+    @apply text-base text-primary/60 font-semibold sm:w-full sm:pb-0 mb-2 sm:mb-0 lg:text-base 2xl:text-xl border-l-4 border-primary/50 pl-3 md:text-xl;
   }
 
   .description-text {
@@ -205,7 +205,7 @@
 }
 
 .btn-2 {
-  @apply relative inline-flex h-12 w-32 items-center gap-x-5 rounded-lg bg-btn2 px-4 py-3 text-sm font-semibold text-primary duration-350 disabled:pointer-events-none disabled:opacity-50 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px] z-10 drop-shadow-lg;
+  @apply relative inline-flex h-12 w-36 items-center gap-x-5 rounded-lg bg-btn2 px-4 py-3 text-sm font-semibold text-primary duration-350 disabled:pointer-events-none disabled:opacity-50 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px] z-10 drop-shadow-lg;
 }
 
 .btn-2::before {
@@ -238,7 +238,7 @@
 }
 
 .about-wrapper {
-  @apply flex flex-col justify-center items-center min-h-screen mt-2 mt-12 lg:py-4 md:flex-nowrap lg:flex-row lg:flex-row lg:justify-end;
+  @apply flex flex-col justify-center items-center min-h-screen mb-8  mt-12 py-2 lg:py-4 md:flex-nowrap lg:flex-row lg:flex-row lg:justify-end;
 }
 
 .img-about {
@@ -257,16 +257,20 @@
 
 /* artikel produk */
 
-#artikels {
+#articles {
   background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: 10;
+  @apply relative overflow-hidden z-20 bg-center bg-no-repeat bg-cover py-10 md:py-16 lg:py-18 xl:py-20 2xl:py-24;
 }
 
-.card-artikel {
+.article-tag-line {
+  @apply text-2xl text-heading relative font-bold pb-1 xl:text-3xl 2xl:text-5xl border-l-4 xl:border-l-[5px] 2xl:border-l-8 border-heading/80 pl-3 xl:pl-5 py-1 mt-2 sm:mt-4 md:text-3xl w-max;
+}
+
+.article-icon-tag-line {
+  @apply text-3xl lg:text-4xl align-top pb-4;
+}
+
+.card-articles {
   @apply relative h-40 w-full cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 lg:overflow-hidden lg:rounded-md lg:bg-white lg:shadow-lg xl:h-[34rem] 2xl:h-[50rem];
 }
 

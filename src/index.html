@@ -57,7 +57,7 @@
                     <a href="#about" class="navbar-part nav-link navbar-part-lg" aria-current="page">Tentang</a>
                   </li>
                   <li class="group wrapper-navbar-link">
-                    <a href="#artikels" class="navbar-part nav-link navbar-part-lg" aria-current="page">Produk</a>
+                    <a href="#articles" class="navbar-part nav-link navbar-part-lg" aria-current="page">Produk</a>
                   </li>
                   <li class="group wrapper-navbar-link">
                     <a href="#chatbot" class="navbar-part nav-link navbar-part-lg" aria-current="page">Pesan</a>
@@ -86,7 +86,7 @@
               <a href="#about" class="navbar-link nav-link navbar-part" aria-current="page">Tentang</a>
             </li>
             <li class="group wrapper-navbar-link">
-              <a href="#artikels" class="navbar-link nav-link navbar-part" aria-current="page">Produk</a>
+              <a href="#articles" class="navbar-link nav-link navbar-part" aria-current="page">Produk</a>
             </li>
             <li class="group wrapper-navbar-link nav-link">
               <a href="#chatbot" class="navbar-link nav-link navbar-part" aria-current="page">Pesan</a>
@@ -112,7 +112,7 @@
                 Nikmati produk dan cerita seputar angklung karya Pak Jono. Kami menyediakan ruang bagi kamu untuk menjelajahi sebuah produk, memahami makna budaya, dan mendukung pelestarian tradisi pembelian langsung dari pengrajin lokal Jawa Barat.
               </p>
               <div class="btn-group">
-                <a href="#artikels" type="button" class="btn-hero-1">
+                <a href="#articles" type="button" class="btn-hero-1">
                   <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">Lihat Produk <i class="pl-1 fas fa-arrow-right animate-pulse"></i></span>
                 </a>
                 <a href="#chatbot" type="button" class="btn-2 group">
@@ -160,8 +160,8 @@
               Sunda lewat langkah kecil dari pelaku UMKM yang terus berjuang.
             </p>
           </div>
-          <div class="gap-10 py-5 btn-group md:py-5">
-            <a href="#artikels" type="button" class="btn-2 group !min-w-40 !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
+          <div class="gap-10 py-5 btn-group md:py-5 hidden sm:flex">
+            <a href="#articles" type="button" class="btn-2 group ">
               <span class="btn-2-description"
                 >Beli Sekarang
                 <i class="pl-2 fas fa-book-reader animate-pulse"></i>
@@ -171,17 +171,15 @@
         </div>
       </div>
     </section>
-
     <!-- End about -->
 
-    <!-- Artikel Produk -->
-
-    <section id="artikels" class="relative overflow-hidden artikels">
-      <div class="container flex flex-wrap justify-center min-h-screen py-10 sm:py-14 lg:py-16 sm:flex-nowrap sm:flex-row">
+    <!-- Articles Produk -->
+    <section id="articles">
+      <div class="container ">
         <div class="relative self-center w-full h-max">
           <div class="flex justify-between mb-8 lg:mb-10">
-            <h4 class="text-2xl text-heading relative font-bold pb-1 xl:text-3xl 2xl:text-5xl border-l-4 xl:border-l-[5px] 2xl:border-l-8 border-heading/80 pl-3 xl:pl-5 py-1 mt-2 sm:mt-4 md:text-3xl w-max">
-              <span class="hidden sm:inline">Artikel</span>Produk <span class="text-3xl lg:text-4xl align-top pb-4">📰</span>
+            <h4 class="article-tag-line">
+              <span class="hidden sm:inline">Artikel</span>Produk <span class="article-icon-tag-line">📰</span>
             </h4>
             <a href="#chatbot" class="self-end text-xs font-bold tracking-wide uppercase duration-500 border-b-2 h-max w-max md:text-sm xl:text-base text-heading/50 hover:text-heading/80 border-heading/50 hover:border-heading/80"
               >Selengkapnya
@@ -189,38 +187,38 @@
             </a>
           </div>
           <div class="glider-contain">
-            <div class="lg:flex lg:flex-row !gap-6 lg:!gap-8 glider artikel-glider">
-              <div class="group card-artikel">
+            <div class="lg:flex lg:flex-row !gap-6 lg:!gap-8 glider articles-glider">
+              <div class="group card-articles">
                 <a href="#chatbot">
-                  <div class="flex flex-row w-full h-full lg:flex-col sm:gap-x-3 lg:gap-0">
+                  <div class="flex flex-row w-full h-full lg:flex-col gap-x-3 lg:gap-0">
                     <div
-                      class="w-[30%] lg:hidden lg:w-full hidden sm:flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-artikel-1.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
+                      class="w-[50%] sm:w-[30%] lg:hidden lg:w-full flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-articles-1.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
                     >
-                      <i class="absolute text-4xl text-white duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
+                      <i class="absolute text-4xl text-white hidde  sm:inline duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div class="items-center justify-center hidden w-full lg:flex h-max">
                       <img
                         loading="lazy"
                         class="min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md"
-                        src="./img/angklung/foto-artikel-1.jpeg"
+                        src="./img/angklung/foto-articles-1.jpeg"
                         alt=""
                       />
                       <i class="absolute text-4xl text-gray-300 duration-500 scale-0 fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div
-                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-full sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
+                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-[50%] sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
                     >
-                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung</h3>
+                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung Kecil</h3>
                       <p class="text-xs text-description md:text-sm lg:mt-2 2xl:text-base line-clamp-2 xl:line-clamp-4 2xl:line-clamp-4">
-                        Angklung adalah salah satu alat musik tradisional yang sangat populer di Indonesia. Angklung adalah salah satu alat musik tradisional yang sangat
+                        Angklung kecil merupakan salah satu jenis angklung khas Sunda yang memiliki 2 rongga.
                       </p>
                       <div class="flex items-center justify-between w-full pt-4 lg:pt-5 md:pt-4 2xl:pt-6">
                         <div class="flex items-center">
-                          <h3 class="text-md font-semibold text-heading md:text-lg 2xl:text-2xl">Rp. 100.000</h3>
+                          <h3 class="text-md font-bold text-heading md:text-lg 2xl:text-2xl">Rp. 100.000</h3>
                         </div>
-                        <div class="flex items-center">
+                        <div class="items-center hidden sm:flex">
                           <span class="flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50">
-                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 3 rongga </span>
+                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 2 rongga </span>
                           </span>
                         </div>
                       </div>
@@ -228,37 +226,37 @@
                   </div>
                 </a>
               </div>
-              <div class="group card-artikel my-5 lg:my-0">
+              <div class="group card-articles my-4 sm:my-0">
                 <a href="#chatbot">
-                  <div class="flex flex-row w-full h-full lg:flex-col sm:gap-x-3 lg:gap-0">
+                  <div class="flex flex-row w-full h-full lg:flex-col gap-x-3 lg:gap-0">
                     <div
-                      class="w-[30%] lg:hidden lg:w-full hidden sm:flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-artikel-2.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
+                      class="w-[50%] sm:w-[30%] lg:hidden lg:w-full flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-articles-2.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
                     >
-                      <i class="absolute text-4xl text-white duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
+                      <i class="absolute text-4xl text-white hidde  sm:inline duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div class="items-center justify-center hidden w-full lg:flex h-max">
                       <img
                         loading="lazy"
                         class="min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md"
-                        src="./img/angklung/foto-artikel-2.jpeg"
+                        src="./img/angklung/foto-articles-2.jpeg"
                         alt=""
                       />
                       <i class="absolute text-4xl text-gray-300 duration-500 scale-0 fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div
-                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-full sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
+                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-[50%] sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
                     >
-                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung</h3>
+                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung Besar</h3>
                       <p class="text-xs text-description md:text-sm lg:mt-2 2xl:text-base line-clamp-2 xl:line-clamp-4 2xl:line-clamp-4">
-                        Angklung adalah salah satu alat musik tradisional yang sangat populer di Indonesia. Angklung adalah salah satu alat musik tradisional yang sangat
+                        Angklung besar merupakan salah satu jenis angklung khas Sunda yang memiliki 8 rongga.
                       </p>
                       <div class="flex items-center justify-between w-full pt-4 lg:pt-5 md:pt-4 2xl:pt-6">
                         <div class="flex items-center">
-                          <h3 class="text-md font-semibold text-heading md:text-lg 2xl:text-2xl">Rp. 100.000</h3>
+                          <h3 class="text-md font-bold text-heading md:text-lg 2xl:text-2xl">Rp. 300.000</h3>
                         </div>
-                        <div class="flex items-center">
+                        <div class="items-center hidden sm:flex">
                           <span class="flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50">
-                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 3 rongga </span>
+                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 8 rongga </span>
                           </span>
                         </div>
                       </div>
@@ -266,37 +264,37 @@
                   </div>
                 </a>
               </div>
-              <div class="group card-artikel">
+              <div class="group card-articles">
                 <a href="#chatbot">
-                  <div class="flex flex-row w-full h-full lg:flex-col sm:gap-x-3 lg:gap-0">
+                  <div class="flex flex-row w-full h-full lg:flex-col gap-x-3 lg:gap-0">
                     <div
-                      class="w-[30%] lg:hidden lg:w-full hidden sm:flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-artikel-3.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
+                      class="w-[50%] sm:w-[30%] lg:hidden lg:w-full flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-articles-3.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
                     >
-                      <i class="absolute text-4xl text-white duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
+                      <i class="absolute text-4xl text-white hidde  sm:inline duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div class="items-center justify-center hidden w-full lg:flex h-max">
                       <img
                         loading="lazy"
                         class="min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md"
-                        src="./img/angklung/foto-artikel-3.jpeg"
+                        src="./img/angklung/foto-articles-3.jpeg"
                         alt=""
                       />
                       <i class="absolute text-4xl text-gray-300 duration-500 scale-0 fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div
-                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-full sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
+                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-[50%] sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
                     >
-                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung</h3>
+                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung Besar</h3>
                       <p class="text-xs text-description md:text-sm lg:mt-2 2xl:text-base line-clamp-2 xl:line-clamp-4 2xl:line-clamp-4">
-                        Angklung adalah salah satu alat musik tradisional yang sangat populer di Indonesia. Angklung adalah salah satu alat musik tradisional yang sangat
+                        Angklung besar merupakan salah satu jenis angklung khas Sunda yang memiliki 8 rongga.
                       </p>
                       <div class="flex items-center justify-between w-full pt-4 lg:pt-5 md:pt-4 2xl:pt-6">
                         <div class="flex items-center">
-                          <h3 class="text-md font-semibold text-heading md:text-lg 2xl:text-2xl">Rp. 100.000</h3>
+                          <h3 class="text-md font-bold text-heading md:text-lg 2xl:text-2xl">Rp. 300.000</h3>
                         </div>
-                        <div class="flex items-center">
+                        <div class="items-center hidden sm:flex">
                           <span class="flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50">
-                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 3 rongga </span>
+                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 8 rongga </span>
                           </span>
                         </div>
                       </div>
@@ -304,75 +302,37 @@
                   </div>
                 </a>
               </div>
-              <div class="group card-artikel hidden lg:block">
+              <div class="group card-articles hidden lg:block">
                 <a href="#chatbot">
-                  <div class="flex flex-row w-full h-full lg:flex-col sm:gap-x-3 lg:gap-0">
+                  <div class="flex flex-row w-full h-full lg:flex-col gap-x-3 lg:gap-0">
                     <div
-                      class="w-[30%] lg:hidden lg:w-full hidden sm:flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-artikel-4.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
+                      class="w-[50%] sm:w-[30%] lg:hidden lg:w-full flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-articles-3.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
                     >
-                      <i class="absolute text-4xl text-white duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
+                      <i class="absolute text-4xl text-white hidde  sm:inline duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div class="items-center justify-center hidden w-full lg:flex h-max">
                       <img
                         loading="lazy"
                         class="min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md"
-                        src="./img/angklung/foto-artikel-4.jpeg"
+                        src="./img/angklung/foto-articles-4.jpeg"
                         alt=""
                       />
                       <i class="absolute text-4xl text-gray-300 duration-500 scale-0 fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
                     </div>
                     <div
-                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-full sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
+                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-[50%] sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
                     >
-                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung</h3>
+                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung Kecil</h3>
                       <p class="text-xs text-description md:text-sm lg:mt-2 2xl:text-base line-clamp-2 xl:line-clamp-4 2xl:line-clamp-4">
-                        Angklung adalah salah satu alat musik tradisional yang sangat populer di Indonesia. Angklung adalah salah satu alat musik tradisional yang sangat
+                        Angklung kecil merupakan salah satu jenis angklung khas Sunda yang memiliki 2 rongga.
                       </p>
                       <div class="flex items-center justify-between w-full pt-4 lg:pt-5 md:pt-4 2xl:pt-6">
                         <div class="flex items-center">
-                          <h3 class="text-md font-semibold text-heading md:text-lg 2xl:text-2xl">Rp. 100.000</h3>
+                          <h3 class="text-md font-bold text-heading md:text-lg 2xl:text-2xl">Rp. 80.000</h3>
                         </div>
-                        <div class="flex items-center">
+                        <div class="items-center hidden sm:flex">
                           <span class="flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50">
-                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 3 rongga </span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="group card-artikel hidden lg:block">
-                <a href="#chatbot">
-                  <div class="flex flex-row w-full h-full lg:flex-col sm:gap-x-3 lg:gap-0">
-                    <div
-                      class="w-[30%] lg:hidden lg:w-full hidden sm:flex shadow-md rounded-md h-full bg-[url('../img/angklung/foto-artikel-5.jpeg')] bg-center bg-cover justify-center items-center relative duration-500 group-hover:brightness-75 group-hover:drop-shadow-md bg-blend-darken"
-                    >
-                      <i class="absolute text-4xl text-white duration-500 scale-0 blur-none fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
-                    </div>
-                    <div class="items-center justify-center hidden w-full lg:flex h-max">
-                      <img
-                        loading="lazy"
-                        class="min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md"
-                        src="./img/angklung/foto-artikel-5.jpeg"
-                        alt=""
-                      />
-                      <i class="absolute text-4xl text-gray-300 duration-500 scale-0 fas fa-book-reader group-hover:scale-100 2xl:text-5xl"></i>
-                    </div>
-                    <div
-                      class="flex flex-col bg-white border-t-2 lg:border-none lg:border-primary/50 rounded-md shadow-md lg:shadow-none lg:rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5 w-full sm:w-[70%] lg:w-full md:px-4 md:pt-4 md:pb-4 lg:px-6"
-                    >
-                      <h3 class="pb-1 text-base font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2">Angklung</h3>
-                      <p class="text-xs text-description md:text-sm lg:mt-2 2xl:text-base line-clamp-2 xl:line-clamp-4 2xl:line-clamp-4">
-                        Angklung adalah salah satu alat musik tradisional yang sangat populer di Indonesia. Angklung adalah salah satu alat musik tradisional yang sangat
-                      </p>
-                      <div class="flex items-center justify-between w-full pt-4 lg:pt-5 md:pt-4 2xl:pt-6">
-                        <div class="flex items-center">
-                          <h3 class="text-md font-semibold text-heading md:text-lg 2xl:text-2xl">Rp. 100.000</h3>
-                        </div>
-                        <div class="flex items-center">
-                          <span class="flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50">
-                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 3 rongga </span>
+                            <span class="text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500"> 2 rongga </span>
                           </span>
                         </div>
                       </div>
@@ -389,12 +349,12 @@
         </div>
       </div>
       <!-- pattern -->
-      <img class="w-auto h-50 sm:h-70 translate-x-1/6 rotate-180 md:h-70 lg:h-90 2xl:h-110 -z-1 sm:block -left-17 top-0 opacity-40 absolute drop-shadow-xl" src="./img/pattern-hero.png" alt="Logo" />
-      <img class="w-auto h-50 sm:h-70 rotate-0 md:h-70 lg:h-90 2xl:h-110 -z-1 sm:block right-0 opacity-40 bottom-0 absolute drop-shadow-xl" src="./img/pattern-hero.png" alt="Logo" />
+      <img class="w-auto h-50 sm:h-70 translate-x-1/6 rotate-180 md:h-70 lg:h-80 2xl:h-90 -z-1 sm:block -left-17 top-0 opacity-15 absolute drop-shadow-xl" src="./img/pattern-hero.png" alt="Logo" />
+      <img class="w-auto h-50 sm:h-70 rotate-0 md:h-70 lg:h-90 2xl:h-110 -z-1 sm:block right-0 opacity-15 bottom-0 absolute drop-shadow-xl" src="./img/pattern-hero.png" alt="Logo" />
       <!-- End pattern -->
     </section>
 
-    <!-- End Artikel Produk -->
+    <!-- End Articles Produk -->
 
     <!-- whatsapp bot -->
 
@@ -412,7 +372,7 @@
             <button type="button" class="btn-whatsapp duration-500 cursor-pointer w-full mr-2 lg:w-[45%] h-14 2xl:h-16 text-base text-green-500 bg-transparent border-2 border-green-500 rounded-md">
               <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">WhatsApp ChatBot <i class="pl-2 fas fa-robot animate-pulse"></i></span>
             </button>
-            <a href="#artikels" type="button" class="btn-2 group !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
+            <a href="#articles" type="button" class="btn-2 group !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
               <span class="btn-2-description"
                 >Produk
                 <i class="pl-2 fas fa-book-reader animate-pulse"></i>

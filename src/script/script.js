@@ -40,11 +40,7 @@ function handleScrollHighlight() {
 }
 
 // ========== SCROLL HIGHLIGHT ==========
-window.addEventListener("scroll", () => {
-  clearTimeout(window.__scrollTimer);
-  window.__scrollTimer = setTimeout(handleScrollHighlight, 100);
-});
-
+window.addEventListener("scroll", handleScrollHighlight);
 // ========== HAMBURGER MENU TOGGLE ==========
 hamburger.addEventListener("click", () => {
   blankDisplay.classList.toggle("scale-0");
@@ -87,7 +83,7 @@ let isGliderInitialized = false;
 
 function checkAndInitGlider() {
   const draggableElement = document.querySelector(".draggable");
-  const gliderElement = document.querySelector(".artikel-glider");
+  const gliderElement = document.querySelector(".articles-glider");
   const target = gliderElement || draggableElement;
 
   if (window.innerWidth > 1024) {
