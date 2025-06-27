@@ -5,72 +5,78 @@ const navMenu = document.querySelector("#mobile-menu");
 const blankDisplay = document.querySelector("#blank-display");
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".wrapper-navbar-link");
+const navHighlightLinks = document.querySelectorAll(".nav-link");
 
-// ========== SCROLL BEHAVIOR ==========
-window.onscroll = function () {
+// ========== COMMON FUNCTION ==========
+function openNav() {
+  blankDisplay.classList.remove("scale-0");
+  hamburger.classList.add("hamburger-active");
+  navMenu.classList.add("navbar-menu-active", "-right-0");
+  navMenu.classList.remove("-right-96");
+}
+
+function closeNav() {
+  blankDisplay.classList.add("scale-0");
+  hamburger.classList.remove("hamburger-active");
+  navMenu.classList.remove("navbar-menu-active", "-right-0");
+  navMenu.classList.add("-right-96");
+}
+
+function toggleNav() {
+  const isOpen = navMenu.classList.contains("navbar-menu-active");
+  isOpen ? closeNav() : openNav();
+}
+
+// ========== SCROLL & NAVBAR BEHAVIOR ==========
+function handleScrollEffect() {
   const scrollY = window.scrollY;
-  const navA = document.querySelectorAll(".nav-link");
   const fixedNavbar = navbar.offsetTop;
 
-  // Toggle navbar style on scroll
+  // Blur effect on scroll
   if (scrollY > fixedNavbar) {
     navbar.classList.add("navbar-scrolled", "backdrop-blur-md");
   } else {
     navbar.classList.remove("navbar-scrolled", "backdrop-blur-md");
   }
 
-  // Highlight active section in navbar
-  let current = "";
+  // Highlight active section in nav
+  let currentSection = "";
   sections.forEach((section) => {
-    if (scrollY >= section.offsetTop) {
-      current = section.getAttribute("id");
+    if (scrollY >= section.offsetTop - 100) {
+      currentSection = section.getAttribute("id");
     }
   });
 
-  navA.forEach((a) => {
-    a.classList.toggle("text-active", a.getAttribute("href") === `#${current}`);
+  navHighlightLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    link.classList.toggle("text-active", href === `#${currentSection}`);
   });
-};
+}
 
-// ========== HAMBURGER MENU TOGGLE ==========
-hamburger.addEventListener("click", () => {
-  blankDisplay.classList.toggle("scale-0");
-  hamburger.classList.toggle("hamburger-active");
-  navMenu.classList.toggle("navbar-menu-active");
-  navMenu.classList.toggle("-right-96");
-  navMenu.classList.toggle("-right-0");
-});
+// ========== EVENT BINDING ==========
+window.addEventListener("scroll", handleScrollEffect);
 
-// ========== CLOSE NAV WHEN LINK CLICKED ==========
+hamburger.addEventListener("click", toggleNav);
+
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    blankDisplay.classList.add("scale-0");
-    hamburger.classList.remove("hamburger-active");
-    navMenu.classList.remove("navbar-menu-active", "-right-0");
-    navMenu.classList.add("-right-96");
+    closeNav();
+    setTimeout(handleScrollEffect, 300); // Ensure highlight after scroll
   });
 });
 
-// ========== CLOSE NAV WHEN CLICK OUTSIDE ==========
 document.addEventListener("click", (evt) => {
   const target = evt.target;
 
-  // Click inside nav or hamburger icon
-  if (navMenu.classList.contains("navbar-menu-active") && !(target === hamburger || target.classList.contains("navbar-part"))) {
-    hamburger.classList.remove("hamburger-active");
-    navMenu.classList.remove("navbar-menu-active", "-right-0");
-    navMenu.classList.add("-right-96");
+  // Close nav if clicked outside menu/hamburger
+  const isInsideHamburger = hamburger.contains(target);
+  const isNavbarPart = target.classList.contains("navbar-part");
+
+  if (navMenu.classList.contains("navbar-menu-active") && !isInsideHamburger && !isNavbarPart) {
+    closeNav();
   }
 
-  // Click on hamburger line (icon parts)
-  if (target.classList.contains("hamburger-line")) {
-    hamburger.classList.toggle("hamburger-active");
-    navMenu.classList.toggle("navbar-menu-active");
-    navMenu.classList.toggle("-right-96");
-    navMenu.classList.toggle("-right-0");
-  }
-
-  // Click on background overlay
+  // Click on overlay background
   if (target.classList.contains("blank-display")) {
     blankDisplay.classList.add("scale-0");
   }
@@ -80,61 +86,55 @@ document.addEventListener("click", (evt) => {
 let isGliderInitialized = false;
 
 function checkAndInitGlider() {
-  const draggableElement = document.querySelector(".draggable");
-  const gliderElement = document.querySelector(".artikel-glider");
+  const draggable = document.querySelector(".draggable");
+  const gliderEl = document.querySelector(".articles-glider");
+  const target = gliderEl || draggable;
 
-  if (window.innerWidth > 1024) {
-    const target = gliderElement || draggableElement;
+  if (window.innerWidth > 1024 && target && !target.classList.contains("glider-initialized")) {
+    const glider = new Glider(target, {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      draggable: true,
+      rewind: true,
+      dots: ".dots",
+      arrows: {
+        prev: ".glider-prev",
+        next: ".glider-next",
+      },
+    });
 
-    if (target && !target.classList.contains("glider-initialized")) {
-      const glider = new Glider(target, {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        draggable: true,
-        rewind: true,
-        dots: ".dots",
-        arrows: {
-          prev: ".glider-prev",
-          next: ".glider-next",
-        },
-      });
-
-      target._glider = glider;
-      target.classList.add("glider", "glider-initialized");
-      isGliderInitialized = true;
-    }
-  } else if (isGliderInitialized && gliderElement && gliderElement._glider) {
-    gliderElement._glider.destroy();
-    delete gliderElement._glider;
-    gliderElement.classList.remove("glider-initialized");
+    target._glider = glider;
+    target.classList.add("glider", "glider-initialized");
+    isGliderInitialized = true;
+  } else if (window.innerWidth <= 1024 && isGliderInitialized && gliderEl && gliderEl._glider) {
+    gliderEl._glider.destroy();
+    delete gliderEl._glider;
+    gliderEl.classList.remove("glider-initialized");
     isGliderInitialized = false;
   }
 }
 
-// ========== INIT GLIDER ON LOAD & RESIZE ==========
+// ========== INIT GLIDER ==========
 window.addEventListener("load", checkAndInitGlider);
-
 window.addEventListener("resize", () => {
   checkAndInitGlider();
 
-  // Close nav if resized above breakpoint
+  // Responsive: auto close nav on desktop
   if (window.innerWidth > 768) {
     blankDisplay.classList.add("scale-0");
   } else if (navMenu.classList.contains("navbar-menu-active")) {
-    hamburger.classList.remove("hamburger-active");
-    navMenu.classList.remove("navbar-menu-active", "-right-0");
-    navMenu.classList.add("-right-96");
+    closeNav();
   }
 });
 
-// ========== TYPED JS ==========
-const typed = new Typed("#element", {
+// ========== TYPED.JS INIT ==========
+new Typed("#element", {
   strings: ["Sunda."],
-  loop: true, // agar mengetik terus menerus
-  typeSpeed: 250, // kecepatan mengetik (ms)
-  backSpeed: 250, // kecepatan menghapus (ms)
-  backDelay: 700, // jeda sebelum menghapus (ms)
-  smartBackspace: true, // hanya hapus karakter yang beda dari string berikutnya
+  loop: true,
+  typeSpeed: 250,
+  backSpeed: 250,
+  backDelay: 700,
+  smartBackspace: true,
 });
 
 // ========== AOS INIT ==========
