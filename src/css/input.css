@@ -178,15 +178,19 @@
 }
 
 .deskription-hero {
-  @apply w-[100%] pt-1 text-sm leading-6 tracking-wide text-description sm:w-[76%] sm:pt-3 md:w-[75%] md:pt-5 lg:w-[90%] xl:pt-7 xl:text-lg;
+  @apply w-[100%] pt-1 text-sm leading-6 tracking-wide text-description sm:w-[76%] sm:pt-3 md:w-[75%] md:pt-5 lg:w-[90%] xl:pt-7 xl:text-lg text-justify;
+}
+
+.btn-hero-group {
+  @apply pt-9 md:pt-11;
 }
 
 .btn-hero-1 {
-  @apply mr-4 inline-flex h-12 w-38 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
+  @apply mr-4 inline-flex h-12 w-38 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px] drop-shadow-lg cursor-pointer;
 }
 
 .btn-hero-2 {
-  @apply relative inline-flex h-12 w-32 items-center gap-x-5 rounded-lg bg-btn2 px-4 py-3 text-sm font-semibold text-primary duration-500 disabled:pointer-events-none disabled:opacity-50 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
+  @apply relative inline-flex h-12 w-32 items-center gap-x-5 rounded-lg bg-btn2 px-4 py-3 text-sm font-semibold text-primary duration-500 disabled:pointer-events-none disabled:opacity-50 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px] z-10 drop-shadow-lg;
 }
 
 .btn-hero-2::before {
