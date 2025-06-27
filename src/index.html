@@ -28,14 +28,14 @@
   </head>
   <body>
     <!-- navhero -->
-    <div class="nav-hero relative overflow-hidden">
+    <div class="nav-hero">
       <!-- Navbar -->
       <header class="z-20">
-        <nav class="fixed left-0 right-0 z-30 w-full py-3 2xl:py-5 duration-500" id="navbar">
-          <div class="container flex justify-between items-center">
+        <nav id="navbar">
+          <div class="nav-wrapper container">
             <a href="/" class="flex items-center">
-              <img class="w-auto h-10 rounded-md 2xl:h-12" src="./img/logo-angklung-jono.png" alt="Logo" />
-              <p class="ml-3 text-lg font-bold 2xl:text-2xl text-heading">Angklung<span class="text-primary">Jono</span></p>
+              <img class="logo-brand" src="./img/logo-angklung-jono.png" alt="Logo" />
+              <p class="name-brand">Angklung<span class="text-primary">Jono</span></p>
             </a>
             <div class="inset-y-0 flex justify-end flex-1 lg:hidden">
               <!-- Mobile menu button-->
@@ -47,20 +47,20 @@
                 </button>
               </div>
             </div>
-            <div class="static items-center self-center justify-end hidden h-auto overflow-y-hidden bg-transparent md:block duration-0">
+            <div class="navbar-lg">
               <div class="py-1 space-y-1 navbar-part">
                 <ul class="flex flex-row items-center gap-2 navbar-part">
-                  <li class="group wrapper-navbar-link nav-link">
-                    <a href="#hero" class="navbar-part nav-link text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Beranda</a>
+                  <li class="group wrapper-navbar-link">
+                    <a href="#hero" class="navbar-part nav-link navbar-part-lg text-active" aria-current="page">Beranda</a>
                   </li>
-                  <li class="group wrapper-navbar-link nav-link">
-                    <a href="#about" class="navbar-part nav-link text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Tentang</a>
+                  <li class="group wrapper-navbar-link">
+                    <a href="#about" class="navbar-part nav-link navbar-part-lg" aria-current="page">Tentang</a>
                   </li>
-                  <li class="group wrapper-navbar-link nav-link">
-                    <a href="#artikels" class="navbar-part nav-link text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Produk</a>
+                  <li class="group wrapper-navbar-link">
+                    <a href="#artikels" class="navbar-part nav-link navbar-part-lg" aria-current="page">Produk</a>
                   </li>
-                  <li class="group wrapper-navbar-link nav-link">
-                    <a href="#chatbot" class="navbar-part nav-link text-sm lg:text-base 2xl:text-[1.3rem]" aria-current="page">Pesan</a>
+                  <li class="group wrapper-navbar-link">
+                    <a href="#chatbot" class="navbar-part nav-link navbar-part-lg" aria-current="page">Pesan</a>
                   </li>
                 </ul>
               </div>
@@ -77,7 +77,7 @@
         <div class="space-y-1 navbar-part">
           <ul class="navbar-part gap-11">
             <a href="#hero" class="flex justify-center my-7 navbar-part">
-              <img class="w-auto h-16 navbar-part" src="./img/logo-angklung-jono.png" alt="Logo" />
+              <img class="w-auto h-16 navbar-part" src="./img/logo-angklung-jono.png" alt="Logo" loading="eager" />
             </a>
             <li class="group wrapper-navbar-link nav-link">
               <a href="#hero" class="navbar-link nav-link navbar-part text-active" aria-current="page">Beranda</a>
@@ -97,7 +97,7 @@
       <!-- End Navbar -->
 
       <!-- Hero -->
-      <section id="hero" class="container hero relative md:bg-none">
+      <section id="hero" class="container">
         <div class="relative bg-hero">
           <div class="z-0 flex flex-wrap min-h-screen">
             <div class="relative self-center w-full sm:w-4/5 md:w-4/5 lg:w-1/2 lg:mt-5">
@@ -180,8 +180,8 @@
       <div class="container flex flex-wrap justify-center min-h-screen py-6 sm:py-14 lg:py-16 sm:flex-nowrap sm:flex-row">
         <div class="relative self-center w-full h-max">
           <div class="flex justify-between mb-8 lg:mb-10">
-            <h4 class="text-2xl text-heading relative font-bold sm:w-[80%] pb-1 xl:text-3xl xl:w-[80%] 2xl:text-5xl border-l-4 xl:border-l-[5px] 2xl:border-l-8 border-heading/80 pl-3 xl:pl-5 py-1 mt-2 sm:mt-4 md:text-3xl w-[70%]">
-              Artikel Produk <span class="text-3xl lg:text-4xl align-top pb-4">📰</span>
+            <h4 class="text-2xl text-heading relative font-bold pb-1 xl:text-3xl 2xl:text-5xl border-l-4 xl:border-l-[5px] 2xl:border-l-8 border-heading/80 pl-3 xl:pl-5 py-1 mt-2 sm:mt-4 md:text-3xl w-max">
+              <span class="hidden sm:inline">Artikel</span>Produk <span class="text-3xl lg:text-4xl align-top pb-4">📰</span>
             </h4>
             <a href="#chatbot" class="self-end text-xs font-bold tracking-wide uppercase duration-500 border-b-2 h-max w-max md:text-sm xl:text-base text-heading/50 hover:text-heading/80 border-heading/50 hover:border-heading/80"
               >Selengkapnya
@@ -509,6 +509,7 @@
     <script src="./script/script.js"></script>
     <script src="./extensions/GliderJS/glider.min.js"></script>
     <script src="./extensions/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       AOS.init();
     </script>

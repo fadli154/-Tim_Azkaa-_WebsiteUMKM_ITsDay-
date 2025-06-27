@@ -13,6 +13,16 @@
 }
 
 @layer base {
+  html {
+    overflow-x: clip;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #feffff;
+    overflow-x: clip;
+    font-family: "Inter", sans-serif;
+  }
   @font-face {
     font-family: "Inter";
     font-style: normal;
@@ -79,56 +89,64 @@
   .container {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-10;
   }
+
   .text-active {
     @apply text-primary !font-bold;
   }
+
   .hamburger-line {
     @apply my-2 block h-[2px] w-[30px] bg-black transition duration-300 ease-in-out;
   }
+
+  .tag-line {
+    @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-500 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0;
+  }
 }
 
-html {
-  overflow-x: clip;
-  scroll-behavior: smooth;
+#navbar {
+  @apply fixed left-0 right-0 z-30 w-full py-3 2xl:py-5 duration-500;
 }
 
-body {
-  background: #feffff;
-  overflow-x: clip;
-  font-family: "Inter", sans-serif;
-}
-
-.tag-line {
-  @apply relative w-[85%] pb-2 text-lg font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-500 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%]  md:before:-top-5 lg:w-[80%] lg:text-xl xl:w-[90%]  xl:leading-tight 2xl:text-3xl 2xl:p-0;
+.nav-wrapper {
+  @apply flex justify-between items-center;
 }
 
 .navbar-scrolled {
   @apply top-0 z-30 bg-white/30 shadow-md;
 }
 
-#hamburger {
-  z-index: 999;
+.nav-hero {
+  @apply relative overflow-hidden;
 }
 
 .nav-hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  z-index: -1;
-  top: 0;
-  left: 0;
+  @apply content-[''] absolute top-0 left-0 w-full min-h-screen z-[-1];
   background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
 }
+
+.navbar-lg {
+  @apply static items-center self-center justify-end hidden h-auto overflow-y-hidden bg-transparent md:block duration-0;
+}
+
 .navbar-link {
   @apply relative z-10 my-2 block rounded-md px-3 text-sm font-normal duration-500 group-hover:text-red-50 lg:inline lg:group-hover:text-secondary;
 }
+
 .wrapper-navbar-link {
   @apply relative mx-3 w-auto border-t border-slate-200 py-[7px] duration-500 before:absolute before:top-0 before:h-full before:w-0 before:bg-primary before:opacity-50  before:duration-500 before:content-[''] hover:before:w-full md:border-none md:before:-bottom-1 md:before:top-auto md:before:h-1;
 }
 
 .wrapper-navbar-link .active {
   @apply text-secondary;
+}
+
+.navbar-part-lg {
+  @apply text-sm lg:text-base 2xl:text-[1.3rem];
+}
+
+/* hamburger */
+#hamburger {
+  z-index: 999;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -140,8 +158,20 @@ body {
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+/* end hamburger */
+
+.logo-brand {
+  @apply w-auto h-10 rounded-md 2xl:h-12;
+}
+
+.name-brand {
+  @apply ml-3 text-lg font-bold 2xl:text-2xl text-heading;
+}
 
 /* hero */
+#hero {
+  @apply relative md:bg-none;
+}
 
 .tag-line-hero {
   @apply relative w-[85%] pb-2 text-3xl font-bold text-heading before:absolute before:-top-3 before:h-2 before:w-[25%] before:rounded-r-md before:bg-primary/30 before:duration-500 before:content-[''] sm:w-[70%] sm:before:w-[18%] md:w-[70%] md:text-4xl md:before:-top-5 lg:w-[80%] lg:text-4xl xl:w-[90%] xl:text-5xl xl:leading-tight 2xl:text-6xl;
@@ -152,29 +182,20 @@ body {
 }
 
 .btn-hero-1 {
-  @apply mr-4 inline-flex h-12 w-36 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
+  @apply mr-4 inline-flex h-12 w-38 sm:w-40 items-center rounded-lg  border border-transparent bg-primary  px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-primary duration-500 hover:bg-primary focus:ring-2 focus:ring-primary/50 disabled:pointer-events-none disabled:opacity-50 lg:mr-6 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
 }
 
 .btn-hero-2 {
   @apply relative inline-flex h-12 w-32 items-center gap-x-5 rounded-lg bg-btn2 px-4 py-3 text-sm font-semibold text-primary duration-500 disabled:pointer-events-none disabled:opacity-50 xl:h-14 xl:w-[180px] 2xl:h-16 2xl:w-[200px];
 }
 
+.btn-hero-2::before {
+  @apply absolute top-0 left-0 h-full w-0 rounded-md transition-all duration-1000 ease-out z-[-1] content-[''] bg-primary;
+}
+
 .btn-hero-2:hover::before,
 .btn-hero-2:focus::before {
   width: 100%;
-}
-
-.btn-hero-2::before {
-  content: "";
-  position: absolute;
-  border-radius: 0.5rem;
-  width: 0;
-  height: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  transition: all 0.5s ease-out;
-  background-color: var(--color-primary);
 }
 
 /* end hero */

@@ -1,43 +1,39 @@
+// ========== DOM ELEMENT SELECTION ==========
 const navbar = document.querySelector("#navbar");
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#mobile-menu");
 const blankDisplay = document.querySelector("#blank-display");
 const sections = document.querySelectorAll("section[id]");
-const navLink = document.querySelectorAll(".wrapper-navbar-link");
+const navLinks = document.querySelectorAll(".wrapper-navbar-link");
 
+// ========== SCROLL BEHAVIOR ==========
 window.onscroll = function () {
+  const scrollY = window.scrollY;
   const navA = document.querySelectorAll(".nav-link");
   const fixedNavbar = navbar.offsetTop;
 
-  if (window.scrollY > fixedNavbar) {
-    navbar.classList.add("navbar-scrolled");
-    navbar.classList.add("backdrop-blur-md");
+  // Toggle navbar style on scroll
+  if (scrollY > fixedNavbar) {
+    navbar.classList.add("navbar-scrolled", "backdrop-blur-md");
   } else {
-    navbar.classList.remove("navbar-scrolled");
-    navbar.classList.remove("backdrop-blur-md");
+    navbar.classList.remove("navbar-scrolled", "backdrop-blur-md");
   }
 
+  // Highlight active section in navbar
   let current = "";
-
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop) {
+    if (scrollY >= section.offsetTop) {
       current = section.getAttribute("id");
     }
   });
 
   navA.forEach((a) => {
-    if (a.getAttribute("href") === `#${current}`) {
-      a.classList.add("text-active");
-    } else {
-      a.classList.remove("text-active");
-    }
+    a.classList.toggle("text-active", a.getAttribute("href") === `#${current}`);
   });
 };
 
-// hamburger menu
-
-hamburger.addEventListener("click", function () {
+// ========== HAMBURGER MENU TOGGLE ==========
+hamburger.addEventListener("click", () => {
   blankDisplay.classList.toggle("scale-0");
   hamburger.classList.toggle("hamburger-active");
   navMenu.classList.toggle("navbar-menu-active");
@@ -45,47 +41,42 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("-right-0");
 });
 
-// navbar close when click navli
-navLink.forEach((n) => {
-  n.addEventListener("click", function () {
+// ========== CLOSE NAV WHEN LINK CLICKED ==========
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
     blankDisplay.classList.add("scale-0");
     hamburger.classList.remove("hamburger-active");
-    navMenu.classList.toggle("navbar-menu-active");
+    navMenu.classList.remove("navbar-menu-active", "-right-0");
     navMenu.classList.add("-right-96");
-    navMenu.classList.remove("-right-0");
   });
 });
 
-// listen to clicks in document
+// ========== CLOSE NAV WHEN CLICK OUTSIDE ==========
 document.addEventListener("click", (evt) => {
-  let targetElement = evt.target;
+  const target = evt.target;
 
-  if (navMenu.classList.contains("navbar-menu-active")) {
-    if (targetElement == hamburger || targetElement.classList.contains("navbar-part")) {
-      return;
-    } else {
-      hamburger.classList.remove("hamburger-active");
-      navMenu.classList.toggle("navbar-menu-active");
-      navMenu.classList.add("-right-96");
-      navMenu.classList.remove("-right-0");
-    }
+  // Click inside nav or hamburger icon
+  if (navMenu.classList.contains("navbar-menu-active") && !(target === hamburger || target.classList.contains("navbar-part"))) {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.remove("navbar-menu-active", "-right-0");
+    navMenu.classList.add("-right-96");
   }
 
-  if (targetElement.classList.contains("hamburger-line")) {
+  // Click on hamburger line (icon parts)
+  if (target.classList.contains("hamburger-line")) {
     hamburger.classList.toggle("hamburger-active");
     navMenu.classList.toggle("navbar-menu-active");
     navMenu.classList.toggle("-right-96");
     navMenu.classList.toggle("-right-0");
   }
 
-  if (targetElement.classList.contains("blank-display")) {
+  // Click on background overlay
+  if (target.classList.contains("blank-display")) {
     blankDisplay.classList.add("scale-0");
   }
 });
 
-// Glider artikel
-
-// Menyimpan status inisialisasi Glider
+// ========== RESPONSIVE GLIDER CAROUSEL ==========
 let isGliderInitialized = false;
 
 function checkAndInitGlider() {
@@ -93,9 +84,10 @@ function checkAndInitGlider() {
   const gliderElement = document.querySelector(".artikel-glider");
 
   if (window.innerWidth > 1024) {
-    // Jika elemen .glider tidak ada dan lebar layar lebih besar dari 1024, inisialisasi Glider
-    if (gliderElement) {
-      const glider = new Glider(gliderElement, {
+    const target = gliderElement || draggableElement;
+
+    if (target && !target.classList.contains("glider-initialized")) {
+      const glider = new Glider(target, {
         slidesToShow: 3,
         slidesToScroll: 3,
         draggable: true,
@@ -107,55 +99,30 @@ function checkAndInitGlider() {
         },
       });
 
-      gliderElement._glider = glider; // Store the Glider instance
-      gliderElement.classList.add("glider-initialized");
-      gliderElement.classList.add("glider");
-      isGliderInitialized = true;
-    } else if (draggableElement) {
-      const glider = new Glider(draggableElement, {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        draggable: true,
-        dots: ".dots",
-        arrows: {
-          prev: ".glider-prev",
-          next: ".glider-next",
-        },
-      });
-
-      draggableElement._glider = glider; // Store the Glider instance
-      draggableElement.classList.add("glider-initialized");
-      draggableElement.classList.add("glider");
+      target._glider = glider;
+      target.classList.add("glider", "glider-initialized");
       isGliderInitialized = true;
     }
-  } else if (gliderElement && window.innerWidth < 1024) {
-    // Jika elemen .glider ada dan lebar layar tidak lebih besar dari 1024, hancurkan Glider
-    if (isGliderInitialized) {
-      if (gliderElement._glider) {
-        gliderElement._glider.destroy(); // Destroy the Glider instance
-        delete gliderElement._glider; // Remove the stored Glider instance
-      }
-      gliderElement.classList.remove("glider-initialized");
-      isGliderInitialized = false;
-    }
+  } else if (isGliderInitialized && gliderElement && gliderElement._glider) {
+    gliderElement._glider.destroy();
+    delete gliderElement._glider;
+    gliderElement.classList.remove("glider-initialized");
+    isGliderInitialized = false;
   }
 }
 
-// Memanggil fungsi saat halaman dimuat
+// ========== INIT GLIDER ON LOAD & RESIZE ==========
 window.addEventListener("load", checkAndInitGlider);
 
-// Memanggil fungsi saat lebar layar berubah
-window.addEventListener("resize", function () {
+window.addEventListener("resize", () => {
   checkAndInitGlider();
 
+  // Close nav if resized above breakpoint
   if (window.innerWidth > 768) {
-    if (!blankDisplay.classList.contains("scale-0")) {
-      blankDisplay.classList.add("scale-0");
-    }
+    blankDisplay.classList.add("scale-0");
   } else if (navMenu.classList.contains("navbar-menu-active")) {
     hamburger.classList.remove("hamburger-active");
-    navMenu.classList.toggle("navbar-menu-active");
+    navMenu.classList.remove("navbar-menu-active", "-right-0");
     navMenu.classList.add("-right-96");
-    navMenu.classList.remove("-right-0");
   }
 });
