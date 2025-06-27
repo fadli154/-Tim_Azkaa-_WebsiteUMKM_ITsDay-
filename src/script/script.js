@@ -126,3 +126,16 @@ window.addEventListener("resize", () => {
     navMenu.classList.add("-right-96");
   }
 });
+
+// ========== TYPED JS ==========
+const typed = new Typed("#element", {
+  strings: ["Sunda."],
+  loop: true, // agar mengetik terus menerus
+  typeSpeed: 250, // kecepatan mengetik (ms)
+  backSpeed: 250, // kecepatan menghapus (ms)
+  backDelay: 700, // jeda sebelum menghapus (ms)
+  smartBackspace: true, // hanya hapus karakter yang beda dari string berikutnya
+});
+
+// ========== AOS INIT ==========
+AOS.init();
