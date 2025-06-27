@@ -34,7 +34,7 @@
         <nav id="navbar">
           <div class="nav-wrapper container">
             <a href="/" class="flex items-center">
-              <img class="logo-brand" src="./img/logo-angklung-jono.png" alt="Logo" />
+              <img class="logo-brand" src="./img/logo-angklung-jono.png" title="Logo-AngklungJono" alt="Logo-AngklungJono" />
               <p class="name-brand">Angklung<span class="text-primary">Jono</span></p>
             </a>
             <div class="inset-y-0 flex justify-end flex-1 lg:hidden">
@@ -79,13 +79,13 @@
             <a href="#hero" class="flex justify-center my-7 navbar-part">
               <img class="w-auto h-16 navbar-part" src="./img/logo-angklung-jono.png" alt="Logo" loading="eager" />
             </a>
-            <li class="group wrapper-navbar-link nav-link">
+            <li class="group wrapper-navbar-link">
               <a href="#hero" class="navbar-link nav-link navbar-part text-active" aria-current="page">Beranda</a>
             </li>
-            <li class="group wrapper-navbar-link nav-link">
+            <li class="group wrapper-navbar-link">
               <a href="#about" class="navbar-link nav-link navbar-part" aria-current="page">Tentang</a>
             </li>
-            <li class="group wrapper-navbar-link nav-link">
+            <li class="group wrapper-navbar-link">
               <a href="#artikels" class="navbar-link nav-link navbar-part" aria-current="page">Produk</a>
             </li>
             <li class="group wrapper-navbar-link nav-link">
@@ -100,9 +100,9 @@
       <section id="hero" class="container">
         <div class="bg-hero">
           <div class="z-0 flex flex-wrap min-h-screen">
-            <div class="relative self-center w-full sm:w-4/5 md:w-4/5 lg:w-1/2 lg:mt-5">
+            <div class="left-hero-section-wrapper">
               <div class="flex justify-end mt-5" data-aos="zoom-in-left" data-aos-duration="1000">
-                <img class="w-auto h-48 sm:hidden drop-shadow-xl" src="./img/img-hero-mobile.png" alt="Logo-AngklungJono" title="angklungJono" />
+                <img class="img-hero-mobile" src="./img/img-hero-mobile.png" alt="Logo-AngklungJono" title="angklungJono" />
               </div>
               <h1 class="tag-line-hero">
                 <span class="text-primary">Angklung</span>
@@ -111,18 +111,18 @@
               <p class="description-hero">
                 Nikmati produk dan cerita seputar angklung karya Pak Jono. Kami menyediakan ruang bagi kamu untuk menjelajahi sebuah produk, memahami makna budaya, dan mendukung pelestarian tradisi pembelian langsung dari pengrajin lokal Jawa Barat.
               </p>
-              <div class="btn-hero-group">
+              <div class="btn-group">
                 <a href="#artikels" type="button" class="btn-hero-1">
                   <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">Lihat Produk <i class="pl-1 fas fa-arrow-right animate-pulse"></i></span>
                 </a>
-                <a href="#chatbot" type="button" class="btn-hero-2 group ">
-                  <span class="mx-auto font-semibold duration-300 xl:text-base 2xl:text-lg group-hover:text-white group-focus:text-white focus:text-white">Beli Sekarang</span>
+                <a href="#chatbot" type="button" class="btn-2 group">
+                  <span class="btn-2-description">Beli Sekarang</span>
                 </a>
               </div>
             </div>
-            <div class="flex justify-end mt-5">
+            <div class="right-hero-section-wrapper">
               <img
-                class="hidden sm:block lg:hidden sm:absolute sm:z-0 drop-shadow-xl sm:right-0 sm:bottom-24 w-auto h-48 sm:h-[55%] md:h-[70%]"
+                class="img-hero-tablet"
                 loading="lazy"
                 src="./img/img-hero-tablet.png"
                 alt="bg-hero"
@@ -144,25 +144,25 @@
 
     <!-- about -->
     <section id="about">
-      <div class="container flex flex-col justify-center items-center min-h-screen mt-2 mt-12 lg:py-4 md:flex-nowrap md:flex-row lg:flex-row lg:justify-end">
+      <div class="container about-wrapper">
         <div class="block w-full h-max md:self-center lg:w-[60%]">
-          <div class="flex justify-center md:justify-start">
-            <img loading="lazy" class="w-[250px] sm:w-[300px] md:w-[330px] lg:w-[550px] 2xl:w-[650px] h-auto drop-shadow-xl" src="./img/img-about.png" alt="foto-section1" data-aos="fade-up-right" data-aos-duration="1000" />
+          <div class="flex justify-center lg:justify-start">
+            <img loading="lazy" class="img-about" src="./img/img-about.png" alt="foto-section1" data-aos="fade-up-right" data-aos-duration="1000" />
           </div>
         </div>
-        <div class="w-full h-max self-end flex flex-col justify-end lg:items-end relative sm:self-center pt-12 sm:pt-16 lg:w-[50%]" data-aos="fade-left" data-aos-duration="1000">
-          <h4 class="text-heading relative 2xl:w-[75%] font-bold tag-line">Sedikit Cerita Angklung<span class="text-primary">Jono</span> 💬</h4>
-          <div class="w-full h-auto bg-primary/10 rounded-md p-5 lg:p-7 2xl:p-8 lg:w-[90%] mt-2 lg:mt-4 2xl:mt-12">
-            <h1 class="text-base text-primary/60 font-semibold sm:w-full sm:pb-0 mb-2 sm:mb-0 lg:text-base xl:w-[90%] 2xl:text-xl border-l-4 border-primary/50 pl-3 md:text-xl">Cerita</h1>
-            <p class="min-w-full pt-1 text-sm font-normal leading-6 tracking-wide text-gray-400 sm:pt-2 lg:w-[90%] lg:text-sm xl:pt-4 2xl:text-lg text-pretty 2xl:w-full text-justify lg:pt-0 lg-:text-sm">
+        <div class="right-about-section-wrapper" data-aos="fade-left" data-aos-duration="1000">
+          <h4 class="tag-line">Sedikit Cerita Angklung<span class="text-primary">Jono</span> 💬</h4>
+          <div class="text-about-wrapper">
+            <h1 class="heading-text">Cerita</h1>
+            <p class="description-text">
               Pak Jono adalah pengrajin angklung asal Tasikmalaya yang merintis usahanya sejak 2005, belajar langsung dari almarhum ayahnya. Selama bertahun-tahun, dia memproduksi dan menjual banyak angklung secara mandiri ke sekolah-sekolah seni
-              lokal. Kini, di tengah keterbatasan akses digital, Pak Jono memasarkan produknya secara daring. Melalui platform ini, kami ingin mengenalkan angklung karyanya ke lebih banyak orang dan turut melestarikan budaya
+              lokal. Kini, di tengah keterbatasan akses digital, kami membantu agar Pak Jono dapat memasarkan produknya secara daring. Melalui platform ini, kami ingin mengenalkan angklung karyanya ke lebih banyak orang dan turut melestarikan budaya
               Sunda lewat langkah kecil dari pelaku UMKM yang terus berjuang.
             </p>
           </div>
-          <div class="gap-10 py-5 btn-hero-group md:pt-8 md:pb-7">
-            <a href="#artikels" type="button" class="btn-hero-2 group !min-w-40 !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
-              <span class="mx-auto font-semibold duration-500 xl:text-base 2xl:text-lg group-hover:text-white"
+          <div class="gap-10 py-5 btn-group md:py-5">
+            <a href="#artikels" type="button" class="btn-2 group !min-w-40 !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
+              <span class="btn-2-description"
                 >Beli Sekarang
                 <i class="pl-2 fas fa-book-reader animate-pulse"></i>
               </span>
@@ -399,21 +399,21 @@
     <!-- whatsapp bot -->
 
     <section id="chatbot" class="chatbot relative overflow-hidden">
-      <div class="container flex flex-col justify-center min-h-screen py-10 lg:py-5 bg-bot-section md:flex-nowrap md:flex-row-reverse">
-        <div class="block w-full h-max md:self-center lg:w-[60%]">
-          <div class="flex justify-center md:justify-end">
+      <div class="container flex flex-col justify-center min-h-screen py-10 lg:py-5 bg-bot-section lg:flex-nowrap lg:flex-row-reverse">
+        <div class="block w-full h-max lg:self-center lg:w-[60%]">
+          <div class="flex justify-center lg:justify-end">
             <img loading="lazy" class="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[500px] 2xl:w-[600px] h-auto drop-shadow-xl" src="./img/img-chatbot.png" alt="foto-chatbot" data-aos="fade-up-left" data-aos-duration="1000" />
           </div>
         </div>
         <div class="w-full h-max relative sm:self-center pt-8 lg:w-[50%]" data-aos="fade-right" data-aos-duration="1000">
           <h4 class="heading-section-primary relative w-full 2xl:w-[75%] tag-line">Buat pesanan anda di Angklung<span class="text-primary">Jono</span></h4>
           <p class="w-full pt-1 text-sm font-normal leading-6 tracking-wide text-gray-400 sm:pt-3 lg:w-[90%] xl:pt-7 2xl:text-xl text-pretty lg:text-base">Gunakan chatbot WhatsApp kami untuk melakukan pemesanan.</p>
-          <div class="gap-10 py-5 btn-hero-group md:pt-8 md:pb-7">
+          <div class="gap-10 py-5 btn-group md:pt-8 md:pb-7">
             <button type="button" class="btn-whatsapp duration-500 cursor-pointer w-full mr-2 lg:w-[45%] h-14 2xl:h-16 text-base text-green-500 bg-transparent border-2 border-green-500 rounded-md">
               <span class="pl-2 mx-auto font-semibold xl:text-base 2xl:text-lg">WhatsApp ChatBot <i class="pl-2 fas fa-robot animate-pulse"></i></span>
             </button>
-            <a href="#artikels" type="button" class="btn-hero-2 group !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
-              <span class="mx-auto font-semibold duration-500 xl:text-base 2xl:text-lg group-hover:text-white"
+            <a href="#artikels" type="button" class="btn-2 group !hidden lg:!inline-flex lg:!py-[19px] xl:!py-[16px] 2xl:!h-16 !h-full shadow-lg shadow-primary/20">
+              <span class="btn-2-description"
                 >Produk
                 <i class="pl-2 fas fa-book-reader animate-pulse"></i>
               </span>
@@ -422,7 +422,7 @@
           <div class="w-full h-auto bg-primary/10 rounded-md p-4 lg:p-5 2xl:p-6 lg:w-[80%] lg:mt-4 2xl:mt-12">
             <h1 class="text-base text-primary/60 font-semibold sm:w-full sm:pb-0 mb-2 sm:mb-0 lg:text-base xl:w-[90%] 2xl:text-xl border-l-4 border-primary/50 pl-3 md:text-xl">Catatan</h1>
             <p class="min-w-full pt-1 text-sm font-normal leading-6 tracking-wide text-gray-400 sm:pt-2 lg:w-[90%] lg:text-sm xl:pt-4 2xl:text-lg text-pretty 2xl:w-full text-justify lg:pt-0 lg-:text-sm">
-              pesanan anda akan diverifikasi terlebih dahulu dan didokumentasikan oleh admin. jika terverifikasi pesanan akan ditindak lanjuti oleh admin
+              pesanan anda akan segera diverifikasi dan didokumentasikan terlebih dahulu oleh admin, jika pesanan terverifikasi maka akan ditindak lanjuti oleh admin
               <span class="font-bold text-heading">Angklung<span class="text-primary">Jono</span></span
               >. Pesanan anda akan segera mungkin dikirim.
             </p>
@@ -440,7 +440,7 @@
         <div class="grid grid-cols-1 pt-10 pb-0 sm:pb-8 md:grid-cols-3 md:gap-5">
           <div class="flex flex-col items-center justify-center w-full h-full md:flex-col">
             <div class="flex flex-col justify-center items-center md:items-start md:justify-start md:text-start w-full 2xl:w-[80%]">
-              <img class="w-16 h-auto 2xl:w-24" src="./img/logo-angklung-jono.png" alt="logo" />
+              <img class="w-16 h-auto 2xl:w-24 drop-shadow-md" src="./img/logo-angklung-jono.png" alt="logo" />
             </div>
             <div class="text-center flex flex-col justify-center md:justify-start md:text-start pt-6 2xl:w-[80%]">
               <h4 class="text-base font-bold text-heading sm:text-lg md:te 2xl:text-2xl lg:text-lg">Suara Alam dari Tanah Sunda</h4>
