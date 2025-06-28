@@ -32,14 +32,12 @@ function handleScrollEffect() {
   const scrollY = window.scrollY;
   const fixedNavbar = navbar.offsetTop;
 
-  // Blur effect on scroll
   if (scrollY > fixedNavbar) {
     navbar.classList.add("navbar-scrolled", "backdrop-blur-md");
   } else {
     navbar.classList.remove("navbar-scrolled", "backdrop-blur-md");
   }
 
-  // Highlight active section in nav
   let currentSection = "";
   sections.forEach((section) => {
     if (scrollY >= section.offsetTop - 100) {
@@ -61,14 +59,12 @@ hamburger.addEventListener("click", toggleNav);
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     closeNav();
-    setTimeout(handleScrollEffect, 300); // Ensure highlight after scroll
+    setTimeout(handleScrollEffect, 300);
   });
 });
 
 document.addEventListener("click", (evt) => {
   const target = evt.target;
-
-  // Close nav if clicked outside menu/hamburger
   const isInsideHamburger = hamburger.contains(target);
   const isNavbarPart = target.classList.contains("navbar-part");
 
@@ -76,7 +72,6 @@ document.addEventListener("click", (evt) => {
     closeNav();
   }
 
-  // Click on overlay background
   if (target.classList.contains("blank-display")) {
     blankDisplay.classList.add("scale-0");
   }
@@ -84,6 +79,29 @@ document.addEventListener("click", (evt) => {
 
 // ========== RESPONSIVE GLIDER CAROUSEL ==========
 let isGliderInitialized = false;
+
+// AUTOPLAY FUNCTION with pause on hover
+function autoPlayGlider(gliderInstance, targetElement, delay = 4000) {
+  let currentIndex = 0;
+  const totalSlides = gliderInstance.track.childElementCount;
+  let autoplayInterval;
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      gliderInstance.scrollItem(currentIndex);
+    }, delay);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  targetElement.addEventListener("mouseenter", stopAutoplay);
+  targetElement.addEventListener("mouseleave", startAutoplay);
+
+  startAutoplay(); // Mulai pertama kali
+}
 
 function checkAndInitGlider() {
   const target = document.querySelector(".articles-glider");
@@ -102,7 +120,6 @@ function checkAndInitGlider() {
     },
     responsive: [
       {
-        // >= 640px
         breakpoint: 640,
         settings: {
           slidesToShow: 2,
@@ -110,7 +127,6 @@ function checkAndInitGlider() {
         },
       },
       {
-        // >= 1024px
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
@@ -123,15 +139,15 @@ function checkAndInitGlider() {
   target._glider = glider;
   target.classList.add("glider", "glider-initialized");
   isGliderInitialized = true;
+
+  // AUTOPLAY dengan pause on hover
+  autoPlayGlider(glider, target, 2000);
 }
 
 // ========== INIT GLIDER ==========
 window.addEventListener("load", checkAndInitGlider);
 window.addEventListener("resize", () => {
-  // Jangan destroy, hanya cek & inisialisasi jika belum
   checkAndInitGlider();
-
-  // Responsive: auto close nav on desktop
   if (window.innerWidth > 768) {
     blankDisplay.classList.add("scale-0");
   } else if (navMenu.classList.contains("navbar-menu-active")) {
