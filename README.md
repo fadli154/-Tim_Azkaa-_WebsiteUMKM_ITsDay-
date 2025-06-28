@@ -6,7 +6,7 @@
 
 ## 🌐 Konsep Website
 
-AngklungJono adalah platform digital yang bertujuan untuk mempromosikan dan memperluas jangkauan alat musik tradisional Indonesia, yaitu angklung, kepada masyarakat luas, khususnya generasi muda. Website ini menyajikan informasi lengkap mengenai produk angklung, termasuk sejarah, jenis-jenis, hingga cara memesan secara online.
+AngklungJono adalah platform digital yang bertujuan untuk mempromosikan dan memperluas jangkauan alat musik tradisional Indonesia, yaitu angklung, kepada masyarakat luas, khususnya generasi muda. Website ini menyajikan informasi lengkap mengenai produk angklung, jenis-jenis, hingga cara memesan secara online.
 
 Dengan pendekatan visual yang menarik dan user-friendly, situs ini tidak hanya menjadi etalase digital produk, tetapi juga menjadi sarana edukasi untuk memperkenalkan budaya lokal dalam format yang modern dan interaktif. Melalui AngklungJono, kami ingin menjadikan angklung sebagai bagian dari gaya hidup dan identitas kebudayaan yang membanggakan.
 
@@ -23,7 +23,7 @@ Dengan pendekatan visual yang menarik dan user-friendly, situs ini tidak hanya m
 - **JavaScript** – Interaktivitas pada elemen-elemen dinamis.
 - **Tailwind CSS** – Framework untuk styling yang konsisten dan efisien.
 - **Google Fonts & Icons** – Untuk estetika yang modern.
-- **GitHub Pages** – Untuk deployment website secara gratis dan cepat.
+- **Vercel** – Untuk deployment website secara gratis dan cepat.
 
 ---
 
