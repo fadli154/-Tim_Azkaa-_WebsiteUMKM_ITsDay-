@@ -86,37 +86,49 @@ document.addEventListener("click", (evt) => {
 let isGliderInitialized = false;
 
 function checkAndInitGlider() {
-  const draggable = document.querySelector(".draggable");
-  const gliderEl = document.querySelector(".articles-glider");
-  const target = gliderEl || draggable;
+  const target = document.querySelector(".articles-glider");
 
-  if (window.innerWidth > 1024 && target && !target.classList.contains("glider-initialized")) {
-    const glider = new Glider(target, {
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      draggable: true,
-      rewind: true,
-      dots: ".dots",
-      arrows: {
-        prev: ".glider-prev",
-        next: ".glider-next",
+  if (!target || target.classList.contains("glider-initialized")) return;
+
+  const glider = new Glider(target, {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    rewind: true,
+    dots: ".dots",
+    arrows: {
+      prev: ".glider-prev",
+      next: ".glider-next",
+    },
+    responsive: [
+      {
+        // >= 640px
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
-    });
+      {
+        // >= 1024px
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+    ],
+  });
 
-    target._glider = glider;
-    target.classList.add("glider", "glider-initialized");
-    isGliderInitialized = true;
-  } else if (window.innerWidth <= 1024 && isGliderInitialized && gliderEl && gliderEl._glider) {
-    gliderEl._glider.destroy();
-    delete gliderEl._glider;
-    gliderEl.classList.remove("glider-initialized");
-    isGliderInitialized = false;
-  }
+  target._glider = glider;
+  target.classList.add("glider", "glider-initialized");
+  isGliderInitialized = true;
 }
 
 // ========== INIT GLIDER ==========
 window.addEventListener("load", checkAndInitGlider);
 window.addEventListener("resize", () => {
+  // Jangan destroy, hanya cek & inisialisasi jika belum
   checkAndInitGlider();
 
   // Responsive: auto close nav on desktop

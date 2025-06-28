@@ -259,7 +259,7 @@
 
 #articles {
   background: linear-gradient(90deg, #572b2a59 0%, #fffff8ff 99%);
-  @apply relative overflow-hidden z-20 bg-center bg-no-repeat bg-cover py-14 min-h-screen md:py-16 lg:py-18 xl:py-20 2xl:py-24;
+  @apply relative overflow-hidden z-20 bg-center bg-no-repeat bg-cover py-12 min-h-screen md:py-16 lg:py-18 xl:py-20 2xl:py-24;
 }
 
 .article-tag-line {
@@ -270,8 +270,55 @@
   @apply text-3xl lg:text-4xl align-top pb-4;
 }
 
+.article-sub-tag-line {
+  @apply self-end text-xs font-bold tracking-wide uppercase duration-500 border-b-2 h-max w-max md:text-sm xl:text-base text-heading/50 hover:text-heading/80 border-heading/50 hover:border-heading/80;
+}
+
+.articles-glider {
+  @apply flex flex-row !gap-6 lg:!gap-8;
+}
+
 .card-articles {
-  @apply relative h-40 w-full cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 lg:overflow-hidden lg:rounded-md lg:bg-white lg:shadow-lg xl:h-[34rem] 2xl:h-[50rem];
+  @apply relative h-40 w-full cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 overflow-hidden rounded-md bg-white shadow-lg xl:h-[34rem] 2xl:h-[50rem];
+}
+
+.img-product-wrapper {
+  @apply flex w-full h-full flex-col gap-x-2 sm:gap-x-3 gap-0;
+}
+
+.img-product-lg {
+  @apply min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md;
+}
+
+.icon-product-lg {
+  @apply absolute text-4xl text-gray-300 duration-500 scale-0 group-hover:scale-100 2xl:text-5xl;
+}
+
+.description-product-wrapper {
+  @apply flex flex-col bg-white border-t-2 border-none border-primary/50 rounded-md shadow-md shadow-none rounded-none border-primary/80 z-20 relative justify-center group-hover:brightness-[.95] duration-500 px-5  w-full px-4 pt-4 pb-4 px-6;
+}
+.title-product {
+  @apply pb-1 text-base text-left font-bold md:text-lg 2xl:text-2xl text-heading/70 line-clamp-2;
+}
+
+.description-product {
+  @apply text-xs text-description block md:text-sm lg:mt-2 2xl:text-base line-clamp-2 xl:line-clamp-4 2xl:line-clamp-4;
+}
+
+.price-product-wrapper {
+  @apply flex items-center justify-between w-full pt-4 lg:pt-5 md:pt-4 2xl:pt-6;
+}
+
+.price-product {
+  @apply text-base font-bold text-heading md:text-lg 2xl:text-2xl;
+}
+
+.gendre-product-wrapper {
+  @apply flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50;
+}
+
+.gendre-product {
+  @apply text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500;
 }
 
 /* end artikel produk */
