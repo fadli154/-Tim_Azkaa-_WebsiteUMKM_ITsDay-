@@ -279,7 +279,7 @@
 }
 
 .card-articles {
-  @apply relative h-40 w-full cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 overflow-hidden rounded-md bg-white shadow-lg xl:h-[34rem] 2xl:h-[50rem];
+  @apply relative h-50 w-[120%] cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 overflow-hidden rounded-md bg-white shadow-lg xl:h-[34rem] 2xl:h-[50rem];
 }
 
 .img-product-wrapper {
