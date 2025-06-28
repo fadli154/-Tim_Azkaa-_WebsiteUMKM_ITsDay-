@@ -255,12 +255,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .-right-0 {
-    right: calc(var(--spacing) * -0);
-  }
-  .-right-96 {
-    right: calc(var(--spacing) * -96);
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -270,11 +264,20 @@
   .bottom-80 {
     bottom: calc(var(--spacing) * 80);
   }
+  .-left-0 {
+    left: calc(var(--spacing) * -0);
+  }
   .-left-17 {
     left: calc(var(--spacing) * -17);
   }
+  .-left-96 {
+    left: calc(var(--spacing) * -96);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .\!z-\[99999\] {
+    z-index: 99999 !important;
   }
   .-z-1 {
     z-index: calc(1 * -1);
@@ -1927,7 +1930,7 @@
   }
 }
 #hamburger {
-  z-index: 999;
+  z-index: 999999 !important;
 }
 .hamburger-line {
   margin-block: calc(var(--spacing) * 2);

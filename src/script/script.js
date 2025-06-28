@@ -11,15 +11,15 @@ const navHighlightLinks = document.querySelectorAll(".nav-link");
 function openNav() {
   blankDisplay.classList.remove("scale-0");
   hamburger.classList.add("hamburger-active");
-  navMenu.classList.add("navbar-menu-active", "-right-0");
-  navMenu.classList.remove("-right-96");
+  navMenu.classList.add("navbar-menu-active", "-left-0");
+  navMenu.classList.remove("-left-96");
 }
 
 function closeNav() {
   blankDisplay.classList.add("scale-0");
   hamburger.classList.remove("hamburger-active");
-  navMenu.classList.remove("navbar-menu-active", "-right-0");
-  navMenu.classList.add("-right-96");
+  navMenu.classList.remove("navbar-menu-active", "-left-0");
+  navMenu.classList.add("-left-96");
 }
 
 function toggleNav() {

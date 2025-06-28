@@ -37,13 +37,13 @@
               <img class="logo-brand" src="./img/logo-angklung-jono.png" title="Logo-AngklungJono" alt="Logo-AngklungJono" />
               <p class="name-brand">Angklung<span class="text-primary">Jono</span></p>
             </a>
-            <div class="inset-y-0 flex justify-end flex-1 lg:hidden">
+            <div class="inset-y-0 flex justify-end flex-1 lg:hidden !z-[99999]">
               <!-- Mobile menu button-->
-              <div class="flex items-center">
-                <button id="hamburger" name="hamburger" type="button" class="block md:hidden">
-                  <span class="origin-top-left hamburger-line"></span>
-                  <span class="hamburger-line"></span>
-                  <span class="origin-bottom-left hamburger-line"></span>
+              <div class="flex items-center ">
+                <button id="hamburger" name="hamburger" type="button" class="block md:hidden !z-[99999]">
+                  <span class="origin-top-left hamburger-line !z-[99999]"></span>
+                  <span class="hamburger-line !z-[99999]"></span>
+                  <span class="origin-bottom-left hamburger-line !z-[99999]"></span>
                 </button>
               </div>
             </div>
@@ -73,11 +73,12 @@
         <div tabindex="0" class="absolute inset-0 bg-black opacity-50 blank-display"></div>
       </div>
 
-      <div class="duration-500 fixed bg-white top-0 navbar-part z-[9999] px-2 w-[50%] sm:w-[35%] -right-96 h-screen md:hidden" id="mobile-menu">
+      <div class="duration-500 fixed bg-white top-0 navbar-part z-[9999] px-2 w-[50%] sm:w-[35%] -left-96 h-screen md:hidden" id="mobile-menu">
         <div class="space-y-1 navbar-part">
           <ul class="navbar-part gap-11">
-            <a href="#hero" class="flex justify-center my-7 navbar-part">
-              <img class="w-auto h-16 navbar-part" src="./img/logo-angklung-jono.png" alt="Logo" loading="eager" />
+            <a href="#hero" class="flex justify-center items-center flex-col my-7 navbar-part">
+              <img class="w-auto h-16 navbar-part mb-2" src="./img/logo-angklung-jono.png" alt="Logo" loading="eager" />
+              <p class="name-brand">Angklung<span class="text-primary">Jono</span></p>
             </a>
             <li class="group wrapper-navbar-link">
               <a href="#hero" class="navbar-link nav-link navbar-part text-active" aria-current="page">Beranda</a>
