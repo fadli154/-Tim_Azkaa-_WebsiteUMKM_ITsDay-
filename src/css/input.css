@@ -279,11 +279,11 @@
 }
 
 .glider-track {
-  @apply !gap-x-2 sm:!gap-[32px];
+  @apply !gap-x-2 sm:!gap-[32px] !h-[110%];
 }
 
 .card-articles {
-  @apply relative h-55 w-[120%] cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 overflow-hidden rounded-md bg-white shadow-lg xl:h-[34rem] 2xl:h-[50rem];
+  @apply relative h-55 w-[120%] cursor-pointer md:h-48 lg:h-[30rem] lg:w-1/3 overflow-hidden rounded-md !bg-transparent !backdrop-blur-md bg-red-400  shadow-lg xl:h-[34rem] 2xl:h-[50rem];
 }
 
 .img-product-wrapper {
@@ -291,7 +291,7 @@
 }
 
 .img-product-lg {
-  @apply min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md;
+  @apply min-w-[380px] min-h-[300px] max-h-[270px] 2xl:min-w-[470px] 2xl:min-h-[350px] duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75 group-hover:drop-shadow-md contrast-90 brightness-60;
 }
 
 .icon-product-lg {
@@ -314,15 +314,15 @@
 }
 
 .price-product {
-  @apply text-lg font-bold text-heading md:text-lg 2xl:text-2xl;
+  @apply text-lg font-bold text-heading md:text-lg 2xl:text-2xl text-primary/60;
 }
 
 .gendre-product-wrapper {
-  @apply flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-slate-300/50;
+  @apply flex flex-col items-start justify-center h-full p-2 pl-2 leading-3 rounded-md md:leading-4 bg-primary/30 backdrop-blur-md shadow-sm;
 }
 
 .gendre-product {
-  @apply text-[10px] font-semibold capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-slate-500;
+  @apply text-[10px] font-semibold  capitalize block leading-3 sm:text-[11px] md:text-[12px] 2xl:text-sm text-white;
 }
 
 /* end artikel produk */
