@@ -120,7 +120,7 @@ function checkAndInitGlider() {
     },
     responsive: [
       {
-        breakpoint: 640,
+        breakpoint: 500,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
