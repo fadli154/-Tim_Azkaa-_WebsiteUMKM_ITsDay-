@@ -275,7 +275,11 @@
 }
 
 .articles-glider {
-  @apply flex flex-row gap-0 sm!gap-6 lg:!gap-8;
+  @apply flex flex-row !gap-0 sm:!gap-6 lg:!gap-8;
+}
+
+.glider-track {
+  @apply !gap-x-2 sm:!gap-[32px];
 }
 
 .card-articles {
@@ -283,7 +287,7 @@
 }
 
 .img-product-wrapper {
-  @apply flex w-full h-full flex-col gap-x-0 sm:gap-x-3 gap-0;
+  @apply flex w-full h-full flex-col !gap-x-0 sm:gap-x-3 gap-0;
 }
 
 .img-product-lg {
