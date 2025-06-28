@@ -2445,6 +2445,7 @@
 .article-tag-line {
   position: relative;
   margin-top: calc(var(--spacing) * 2);
+  margin-top: calc(var(--spacing) * 12);
   width: max-content;
   border-left-style: var(--tw-border-style);
   border-left-width: 4px;

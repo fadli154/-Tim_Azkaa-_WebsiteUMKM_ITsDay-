@@ -263,7 +263,7 @@
 }
 
 .article-tag-line {
-  @apply text-2xl text-heading relative font-bold pb-1 xl:text-3xl 2xl:text-5xl border-l-4 xl:border-l-[5px] 2xl:border-l-8 border-heading/80 pl-3 xl:pl-5 py-1 mt-2 sm:mt-4 md:text-3xl w-max;
+  @apply text-2xl text-heading relative font-bold pb-1 xl:text-3xl 2xl:text-5xl border-l-4 xl:border-l-[5px] 2xl:border-l-8 border-heading/80 pl-3 xl:pl-5 py-1 mt-2 sm:mt-4 md:text-3xl w-max mt-12;
 }
 
 .article-icon-tag-line {
